@@ -1,0 +1,317 @@
+{
+  "source": "https://data.mendeley.com/datasets/y9svrbh27n/1",
+  "citation": "Ali, Ali Imran (2021), \"Data set about hand configuration of Pakistan Sign Language\", Mendeley Data, V1, doi:10.17632/y9svrbh27n.1",
+  "paper": "Imran et al. (2021), Data in Brief 36, 107021, doi:10.1016/j.dib.2021.107021",
+  "license": "CC BY 4.0",
+  "detectedSamples": 1032,
+  "detectionAccepted": {
+    "ain": 9,
+    "alif": 39,
+    "bari_yeh": 40,
+    "be": 40,
+    "che": 40,
+    "chhoti_yeh": 36,
+    "dal": 40,
+    "dhal": 30,
+    "fay": 40,
+    "gaf": 19,
+    "hamza": 29,
+    "hay": 39,
+    "he": 13,
+    "jim": 34,
+    "kaf": 40,
+    "khe": 21,
+    "laam": 13,
+    "noon": 12,
+    "pe": 31,
+    "re": 10,
+    "rre": 27,
+    "se": 47,
+    "seen": 21,
+    "sheen": 15,
+    "swad": 23,
+    "te": 44,
+    "toay": 36,
+    "tte": 49,
+    "vao": 40,
+    "zal": 38,
+    "ze": 15,
+    "zhe": 39,
+    "zoay": 27,
+    "zwad": 36
+  },
+  "undetectableClasses": {
+    "ghain": 4,
+    "meem": 2
+  },
+  "scope": "Static PSL Urdu-alphabet handshapes only. Classes MediaPipe cannot reliably detect, moving signs and compound numbers are guided practice. Webcam captures of few signers; not evaluated on children or target phone.",
+  "evaluation": {
+    "psl_alphabet": {
+      "split": "stratified every 5th file per class",
+      "train": 815,
+      "test": 217,
+      "accuracy": 0.967741935483871,
+      "strictAccuracyExcludingNearDuplicates": 0.9590643274853801,
+      "nearDuplicateThreshold": 0.1,
+      "nearDuplicateTestSamples": 46,
+      "medianNearestTrainDistanceSameClass": 0.19536374509334564,
+      "caveat": "Same-session frames may repeat; person-independent accuracy is not established.",
+      "perClass": {
+        "ain": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 2.0
+        },
+        "alif": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "bari_yeh": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "be": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1-score": 0.9411764705882353,
+          "support": 8.0
+        },
+        "che": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "chhoti_yeh": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "dal": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1-score": 0.875,
+          "support": 8.0
+        },
+        "dhal": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 6.0
+        },
+        "fay": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1-score": 0.9333333333333333,
+          "support": 8.0
+        },
+        "gaf": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4.0
+        },
+        "hamza": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "hay": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "he": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "jim": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 7.0
+        },
+        "kaf": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "khe": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "laam": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "noon": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "pe": {
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1-score": 0.9333333333333333,
+          "support": 7.0
+        },
+        "re": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 2.0
+        },
+        "rre": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "se": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "seen": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "sheen": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "swad": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "te": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1-score": 0.9473684210526315,
+          "support": 9.0
+        },
+        "toay": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1-score": 0.8888888888888888,
+          "support": 8.0
+        },
+        "tte": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "vao": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "zal": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1-score": 0.9333333333333333,
+          "support": 8.0
+        },
+        "ze": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "zhe": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "zoay": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 6.0
+        },
+        "zwad": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "accuracy": 0.967741935483871,
+        "macro avg": {
+          "precision": 0.9763538748832867,
+          "recall": 0.9497549019607845,
+          "f1-score": 0.9566772310329952,
+          "support": 217.0
+        },
+        "weighted avg": {
+          "precision": 0.9717924804330335,
+          "recall": 0.967741935483871,
+          "f1-score": 0.9665793753280022,
+          "support": 217.0
+        }
+      },
+      "sha256": "e4a96b6ab139c3139af3746a8c84c1fabdaa933ba845cbaa81abede04a71e4c8"
+    }
+  },
+  "labels": [
+    "ain",
+    "alif",
+    "bari_yeh",
+    "be",
+    "che",
+    "chhoti_yeh",
+    "dal",
+    "dhal",
+    "fay",
+    "gaf",
+    "hamza",
+    "hay",
+    "he",
+    "jim",
+    "kaf",
+    "khe",
+    "laam",
+    "noon",
+    "pe",
+    "re",
+    "rre",
+    "se",
+    "seen",
+    "sheen",
+    "swad",
+    "te",
+    "toay",
+    "tte",
+    "vao",
+    "zal",
+    "ze",
+    "zhe",
+    "zoay",
+    "zwad"
+  ]
+}
