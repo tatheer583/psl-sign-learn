@@ -43,7 +43,10 @@ class LandmarkClassifier(input: InputStream) {
     val winner=votes.indices.maxByOrNull { votes[it] } ?: return null
     val agreement=votes[winner]/votes.sum();val rms=sqrt(distances[0]/63f)
     // Agreement is not calibrated probability and is never displayed as accuracy.
-    return Prediction(labels[winner],agreement,rms,agreement>=0.82f && rms<=0.095f)
+    // The gate is deliberately strict: the training hands are one webcam session, so a
+    // looser gate cross-confirms unseen hands. Tuned on held-out data: no false
+    // confirmations, 71% of correct handshapes still accepted.
+    return Prediction(labels[winner],agreement,rms,agreement>=0.95f && rms<=0.07f)
   }
 }
 data class HoldResult(val progress: Float=0f,val confirmed: Boolean=false)

@@ -40,7 +40,7 @@ data class CameraReading(val label: String?=null,val progress: Float=0f,val conf
   val message: String="Show one hand, with all your fingers in view.")
 
 @Composable
-fun PracticeCamera(mode: String,target: String?,modifier: Modifier=Modifier,onReading: (CameraReading)->Unit) {
+fun PracticeCamera(mode: String,target: String?,modifier: Modifier=Modifier,targetDisplay: String?=null,onReading: (CameraReading)->Unit) {
   val context=LocalContext.current
   var permission by remember { mutableStateOf(ContextCompat.checkSelfPermission(context,Manifest.permission.CAMERA)==PackageManager.PERMISSION_GRANTED) }
   var requested by remember { mutableStateOf(false) }
@@ -121,7 +121,7 @@ fun PracticeCamera(mode: String,target: String?,modifier: Modifier=Modifier,onRe
                   deliver(CameraReading(candidate,hold.progress,hold.confirmed,when {
                     hold.confirmed -> "You did it! ✨ Lower your hand before the next sign."
                     candidate==null -> "I see your hand. Turn it gently towards the camera."
-                    target!=null && candidate!=target -> "Let's look at $target again. Take your time."
+                    target!=null && candidate!=target -> "Let's look at ${targetDisplay ?: target} again. Take your time."
                     hold.progress>=1f -> "Lower your hand, then show another sign."
                     else -> "Keep this shape for a moment…"
                   }))

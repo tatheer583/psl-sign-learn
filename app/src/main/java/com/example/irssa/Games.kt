@@ -123,7 +123,7 @@ fun CameraGame(store: LearningStore,state: LearnerState,initial: Lesson,challeng
     if(!converter) item { SignMedia(target,Modifier.fillMaxWidth().height(220.dp)) }
     if(converter || target.isStatic) {
       item { PracticeCamera(if(converter) mode else target.recognitionMode,if(converter) null else target.classifierLabel,
-        Modifier.fillMaxWidth().height(320.dp)) { result ->
+        Modifier.fillMaxWidth().height(320.dp),targetDisplay=if(converter) null else target.title) { result ->
         reading=result
         if(result.confirmed) {
           if(converter) { val letter=store.lessons.firstOrNull { it.classifierLabel==result.label }?.title ?: result.label.orEmpty()
