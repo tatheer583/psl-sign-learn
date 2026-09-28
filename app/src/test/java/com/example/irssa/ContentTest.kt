@@ -14,26 +14,30 @@ class ContentTest {
   private val app: Application get()=ApplicationProvider.getApplicationContext()
   @Test fun allLessonMediaCanBeOpenedOffline() {
     val lessons=LessonCatalog.load(app)
-    assertEquals(96,lessons.size)
-    assertEquals(96,lessons.map { it.id }.distinct().size)
+    assertEquals(122,lessons.size)
+    assertEquals(122,lessons.map { it.id }.distinct().size)
     val withMedia=lessons.filter { it.media.isNotBlank() }
-    assertEquals(37,withMedia.size)
+    assertEquals(63,withMedia.size)
     withMedia.forEach { item ->
       app.assets.open(item.media).use { assertTrue("Missing ${item.id}",it.read()!=-1) }
       assertTrue(item.source.startsWith("https://"));assertTrue(item.author.isNotBlank())
-      assertTrue("PSL photos must be CC BY 4.0",item.license.contains("CC BY 4.0"))
+      val lic=item.license
+      assertTrue("Open license required: $lic",lic.contains("CC BY 4.0")||lic.contains("CC0"))
     }
   }
   @Test fun modelRejectsInvalidHandData() {
-    val model=LandmarkClassifier(app.assets.open("models/alphabet.bin"))
-    assertNull(model.predict(emptyList()))
+    for(mode in listOf("psl","english")) {
+      val model=LandmarkClassifier(app.assets.open("models/$mode.bin"))
+      assertNull(model.predict(emptyList()))
+    }
   }
   @Test fun onlyDetectedHandshapesAreGradedByTheStaticClassifier() {
     val lessons=LessonCatalog.load(app)
-    assertEquals(34,lessons.count { it.category=="Letters" && it.isStatic })
-    for(id in listOf("letter_qaf","letter_meem","letter_ghain")) {
-      assertFalse("$id has too few usable detections to be graded",lessons.first { it.id==id }.isStatic)
-    }
+    val static=lessons.filter { it.category=="Letters" && it.isStatic }
+    assertEquals(37,static.count { !it.isEnglish })
+    assertEquals(24,static.count { it.isEnglish })
+    assertFalse(lessons.first { it.id=="letter_en_j" }.isStatic)
+    assertFalse(lessons.first { it.id=="letter_en_z" }.isStatic)
     assertTrue(lessons.filter { it.category=="Words" }.none { it.isStatic })
     assertTrue(lessons.filter { it.category=="Numbers" }.none { it.isStatic })
   }
@@ -49,6 +53,8 @@ class ContentTest {
     assertEquals(listOf("vocab_hello"),Spelling.sequence("hello",lessons).map { it.id })
     assertEquals(listOf("vocab_thanks"),Spelling.sequence("Thank You",lessons).map { it.id })
     assertEquals(listOf("num_1","num_0"),Spelling.sequence("10",lessons).map { it.id })
-    assertEquals(listOf("letter_alif","letter_re","letter_seen","letter_seen","letter_alif"),Spelling.sequence("IRSSA",lessons).map { it.id })
+    assertEquals(listOf("letter_en_i","letter_en_r","letter_en_s","letter_en_s","letter_en_a"),Spelling.sequence("IRSSA",lessons).map { it.id })
+    val both=LessonCatalog.load(app)
+    assertTrue(both.count { it.isEnglish }>=26)
   }
 }

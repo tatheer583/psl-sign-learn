@@ -315,7 +315,7 @@ fun HomeScreen(
         ) {
           QuickActionCard(
             title = "Learn A to Z",
-            subtitle = "37 PSL Alphabet Signs",
+            subtitle = "37 Urdu + 26 English Signs",
             emoji = "🔤",
             color = Color(0xFF5C52E5),
             modifier = Modifier
@@ -501,7 +501,8 @@ fun HomeScreen(
         ) {
           val tabs = listOf(
             "ALL" to "All Signs",
-            "ALPHABET" to "A - Z (26 Letters)",
+            "ALPHABET" to "Urdu ا–ے (37)",
+            "ENGLISH" to "English A–Z (26)",
             "NUMBERS_1_10" to "1 - 10 Numbers",
             "NUMBERS_11_50" to "11 - 50 Numbers",
             "VOCABULARY" to "Everyday Words"
@@ -537,6 +538,7 @@ fun HomeScreen(
       Spacer(modifier = Modifier.height(14.dp))
       val filteredItems = when (activeCategoryTab) {
         "ALPHABET" -> LearningDataSource.alphabetItems
+        "ENGLISH" -> LearningDataSource.englishAlphabetItems
         "NUMBERS_1_10" -> LearningDataSource.numberItems.take(10)
         "NUMBERS_11_50" -> LearningDataSource.numberItems.drop(10)
         "VOCABULARY" -> LearningDataSource.vocabularyItems

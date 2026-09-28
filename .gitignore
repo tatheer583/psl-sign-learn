@@ -26,6 +26,8 @@ tools/psl-landmarks.npz
 tools/landmarks.npz
 tools/asl-dataset.zip
 tools/psl-alphabet.zip
+tools/psl-hf-landmarks.zip
+tools/signalphaset.zip
 tools/asl-media-archive/
 tools/venv/
 tools/*.avd/

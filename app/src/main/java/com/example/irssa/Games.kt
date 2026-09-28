@@ -104,7 +104,7 @@ fun MatchGame(store: LearningStore,state: LearnerState,timed: Boolean) {
 fun CameraGame(store: LearningStore,state: LearnerState,initial: Lesson,challenge: Boolean,converter: Boolean) {
   val pool=store.lessons.filter { it.category=="Letters" && it.isStatic }
   var index by rememberSaveable { mutableIntStateOf(0) }
-  var mode by rememberSaveable { mutableStateOf("alphabet") }
+  var mode by rememberSaveable { mutableStateOf("psl") }
   var message by rememberSaveable { mutableStateOf("") }
   var reading by remember { mutableStateOf(CameraReading()) }
   var success by remember { mutableStateOf(false) }
@@ -118,7 +118,8 @@ fun CameraGame(store: LearningStore,state: LearnerState,initial: Lesson,challeng
       if(converter) "Hands with something to say." else "Let's try ${target.title}",
       if(converter) "One clear handshape at a time. Lower your hand between letters." else "Watch the sign, then have a go. There is no hurry.") }
     if(converter) item { Row(horizontalArrangement=Arrangement.spacedBy(12.dp)) {
-      FilterChip(selected=mode=="alphabet",onClick={mode="alphabet"},label={Text("Letters")})
+      FilterChip(selected=mode=="psl",onClick={mode="psl"},label={Text("Urdu ا–ے")})
+      FilterChip(selected=mode=="english",onClick={mode="english"},label={Text("English A–Z")})
     } }
     if(!converter) item { SignMedia(target,Modifier.fillMaxWidth().height(220.dp)) }
     if(converter || target.isStatic) {
@@ -149,7 +150,7 @@ fun CameraGame(store: LearningStore,state: LearnerState,initial: Lesson,challeng
           OutlinedButton(onClick={speech.speak(message)},enabled=message.isNotBlank(),modifier=Modifier.fillMaxWidth()) { Text("Read to a hearing person") }
         }
       } }
-      item { Text("Camera hints can make mistakes. ق, م and غ cannot be seen by the camera yet and are practised with a grown-up. This feature reads handshapes, not sentences.",fontSize=12.sp,color=Muted,lineHeight=18.sp) }
+      item { Text("Camera hints can make mistakes. English J and Z need movement and are practised with a grown-up. This feature reads handshapes, not sentences.",fontSize=12.sp,color=Muted,lineHeight=18.sp) }
     } else {
       item { Surface(color=Mint,shape=RoundedCornerShape(22.dp)) {
         Column(Modifier.padding(20.dp)) {
@@ -177,7 +178,9 @@ object Spelling {
       val match=lessons.firstOrNull { it.category=="Words" && it.title.equals(word,true) }
       if(match!=null) listOf(match) else word.uppercase().mapNotNull { char ->
         if(char.isDigit()) lessons.firstOrNull { it.title==char.toString() && it.category=="Numbers" }
-        else lessons.firstOrNull { it.id=="letter_${latinToPsl[char]}" }
+        // English words fingerspell with the English alphabet; Urdu letters are the fallback.
+        else lessons.firstOrNull { it.id=="letter_en_${char.lowercase()}" }
+          ?: lessons.firstOrNull { it.id=="letter_${latinToPsl[char]}" }
       }
     }
   }

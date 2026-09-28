@@ -20,19 +20,30 @@ import java.time.LocalDate
 data class Lesson(val id: String, val title: String, val word: String, val emoji: String,
   val category: String, val media: String, val isVideo: Boolean, val source: String,
   val author: String, val license: String, val steps: List<String>) {
-  val isStatic: Boolean get() = category == "Letters" && id in recognizedLetters
-  val recognitionMode: String get() = "alphabet"
-  val classifierLabel: String get() = id.removePrefix("letter_")
+  val isEnglish: Boolean get() = id.startsWith("letter_en_")
+  val language: String get() = when {
+    isEnglish -> "English (ASL)"
+    category == "Letters" -> "Urdu (PSL)"
+    else -> "Guided practice"
+  }
+  // J and Z need motion in English; every static PSL handshape with training data is graded.
+  val isStatic: Boolean get() = category == "Letters" &&
+    (if (isEnglish) title !in listOf("J", "Z") else id in recognizedLetters)
+  val recognitionMode: String get() = if (isEnglish) "english" else "psl"
+  val classifierLabel: String get() = when {
+    isEnglish -> id.removePrefix("letter_en_")
+    else -> id.removePrefix("letter_")
+  }
   companion object {
-    // Handshape classes with enough real PSL training examples for the on-device
-    // classifier (see docs/recognition-evaluation.json). غ, م and ق stay guided
-    // practice because the detector cannot see them reliably.
+    // All 37 PSL handshapes now have multi-signer training data (Mendeley + Hugging
+    // Face sources). English J and Z stay guided practice.
     val recognizedLetters: Set<String> = setOf(
       "letter_ain","letter_alif","letter_bari_yeh","letter_be","letter_che","letter_chhoti_yeh",
-      "letter_dal","letter_dhal","letter_fay","letter_gaf","letter_hamza","letter_hay","letter_he",
-      "letter_jim","letter_kaf","letter_khe","letter_laam","letter_noon","letter_pe","letter_re",
-      "letter_rre","letter_se","letter_seen","letter_sheen","letter_swad","letter_te","letter_toay",
-      "letter_tte","letter_vao","letter_zal","letter_ze","letter_zhe","letter_zoay","letter_zwad")
+      "letter_dal","letter_dhal","letter_fay","letter_gaf","letter_ghain","letter_hamza","letter_hay","letter_he",
+      "letter_jim","letter_kaf","letter_khe","letter_laam","letter_meem","letter_noon","letter_pe",
+      "letter_qaf","letter_re","letter_rre","letter_se","letter_seen","letter_sheen","letter_swad",
+      "letter_te","letter_toay","letter_tte","letter_vao","letter_zal","letter_zay","letter_ze","letter_zhe",
+      "letter_zoay","letter_zwad")
   }
 }
 

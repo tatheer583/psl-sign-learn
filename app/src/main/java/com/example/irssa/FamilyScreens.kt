@@ -140,13 +140,13 @@ fun FamilySettings(store: LearningStore,state: LearnerState) {
       OutlinedButton(onClick={open("https://psl.org.pk/")},modifier=Modifier.fillMaxWidth().padding(top=10.dp)) { Text("Visit Deaf Reach's PSL resources ↗") }
     }
     item { Text("Camera coaching",fontSize=20.sp,fontWeight=FontWeight.Bold)
-      Text("An offline experimental coach checks 34 static PSL letter handshapes. It can make mistakes, especially with unfamiliar hands, angles or lighting. ق, م, غ, the numbers and everyday words use guided practice. No camera score is a measure of her ability.",color=Muted,modifier=Modifier.padding(top=8.dp),lineHeight=23.sp)
+      Text("An offline experimental coach checks the 37 PSL handshapes and 24 static English letters, using real data from two independent signers. It can still make mistakes, especially with unfamiliar hands, angles or lighting. English J and Z, the numbers and everyday words use guided practice. In the tools folder, capture_my_hand.py can add her own hand to the model. No camera score is a measure of her ability.",color=Muted,modifier=Modifier.padding(top=8.dp),lineHeight=23.sp)
     }
     item { Text("Her privacy",fontSize=20.sp,fontWeight=FontWeight.Bold)
       Text("No account, adverts or analytics. Camera frames are processed on the device and discarded. Progress stays in the app. Optional spoken input uses the device's speech service, which may need a connection. Read-aloud is only used when someone taps it.",color=Muted,modifier=Modifier.padding(top=8.dp),lineHeight=23.sp)
     }
     item { Text("Real hands, credited sources",fontSize=20.sp,fontWeight=FontWeight.Bold)
-      Text("Hand photographs: \"Data set about hand configuration of Pakistan Sign Language\" by Ali Imran Ali (MNS University of Agriculture Multan, 2021), Mendeley Data V1, doi:10.17632/y9svrbh27n.1, CC BY 4.0. Photos are used unmodified apart from resizing, and the on-device classifier was trained on hand landmarks from the same dataset. No ASL Signbank videos are bundled in this edition.",color=Muted,modifier=Modifier.padding(top=8.dp),lineHeight=23.sp)
+      Text("Hand photographs: \"Data set about hand configuration of Pakistan Sign Language\" by Ali Imran Ali (MNS University of Agriculture Multan, 2021), Mendeley Data V1, doi:10.17632/y9svrbh27n.1, CC BY 4.0. Photos are used unmodified apart from resizing, and the on-device classifier was trained on hand landmarks from the same dataset. English letters use the CC0 ASL dataset and SignAlphaSet (Mendeley doi:10.17632/8fmvr9m98w.1, CC BY 4.0); PSL recognition training also uses the Hugging Face PSL gesture dataset (Bakhtyar12, MIT). No ASL Signbank videos are bundled.",color=Muted,modifier=Modifier.padding(top=8.dp),lineHeight=23.sp)
       TextButton(onClick={open("https://data.mendeley.com/datasets/y9svrbh27n/1")}) { Text("PSL photograph dataset ↗") }
       TextButton(onClick={open("https://creativecommons.org/licenses/by/4.0/")}) { Text("Dataset license ↗") }
       TextButton(onClick={open("https://doi.org/10.1016/j.dib.2021.107021")}) { Text("Dataset paper ↗") }

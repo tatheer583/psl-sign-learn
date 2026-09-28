@@ -76,9 +76,9 @@ fun AlphabetWordsScreen(
 
   val letters = remember(activeFilter) {
     when (activeFilter) {
-      "VOWELS" -> LearningDataSource.vowelItems
-      "A_M" -> LearningDataSource.alphabetItems.filter { it.title[0] in 'A'..'M' }
-      "N_Z" -> LearningDataSource.alphabetItems.filter { it.title[0] in 'N'..'Z' }
+      "VOWELS" -> LearningDataSource.vowelItems +
+        LearningDataSource.englishAlphabetItems.filter { it.title in listOf("A", "E", "I", "O", "U") }
+      "ENGLISH" -> LearningDataSource.englishAlphabetItems
       else -> LearningDataSource.alphabetItems
     }
   }
@@ -167,10 +167,9 @@ fun AlphabetWordsScreen(
       horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
       val filterOptions = listOf(
-        "ALL" to "All A–Z (26)",
-        "VOWELS" to "Vowels (A,E,I,O,U)",
-        "A_M" to "A – M",
-        "N_Z" to "N – Z"
+        "ALL" to "Urdu ا–ے (37)",
+        "ENGLISH" to "English A–Z (26)",
+        "VOWELS" to "Vowels (ا + A,E,I,O,U)"
       )
       filterOptions.forEach { (key, label) ->
         val isSelected = activeFilter == key

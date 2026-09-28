@@ -42,7 +42,7 @@ fun SignMedia(lesson: Lesson,modifier: Modifier=Modifier,compact: Boolean=false)
   }
   if(!lesson.isVideo) {
     Box(modifier.clip(RoundedCornerShape(24.dp)).background(Color(0xFF151E26)),contentAlignment=Alignment.Center) {
-      AsyncImage(model="file:///android_asset/${lesson.media}",contentDescription="A real hand showing PSL ${lesson.title}",
+      AsyncImage(model="file:///android_asset/${lesson.media}",contentDescription="A real hand showing ${lesson.title} (${lesson.language})",
         modifier=Modifier.fillMaxSize().padding(12.dp),contentScale=ContentScale.Fit)
     }
     return

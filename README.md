@@ -21,12 +21,25 @@ in front of the camera, play games, and collect stickers — completely offline.
 
 ## What's inside
 
-- **37 PSL letter lessons** — one real hand photograph per letter, step-by-step visual
-  cues, Urdu words (ا for انار, ب for بکری…) and fun facts.
-- **Camera practice** — an offline hand-recognition coach checks 34 static PSL letter
-  handshapes in real time and rewards a correct sign held for 1.2 seconds.
+- **Two alphabets, clearly separated:**
+  - **Urdu (PSL): 37 letters** — real hand photographs, step-by-step cues, Urdu words
+    (ا for انار, ب for بکری…).
+  - **English (ASL): 26 letters** — real hand photographs and English words, taught as a
+    *different* language from PSL, never mixed.
+- **Camera practice** — an offline hand-recognition coach checks all 37 static PSL
+  handshapes and 24 static English letters in real time. Recognition is trained on real
+  data from **independent signers** and only confirms a sign held for 1.2 seconds.
 - **Numbers 0–50 and everyday words** — guided practice, designed to be learned together
   with a teacher or family member.
+- **Personalize it with your own hand** (optional, on a computer with a webcam):
+
+  ```
+  tools/venv/Scripts/python.exe tools/capture_my_hand.py psl      # then: english
+  tools/venv/Scripts/python.exe tools/train_hybrid.py
+  ```
+
+  Sign each letter a few times in front of your webcam; the model is retrained with
+  your hand weighted heavily, which is the single biggest accuracy upgrade possible.
 - **Games** — Speed Match, quiz games, camera quest, and a sticker reward system.
 - **Gesture converter & speech-to-sign** — type or speak a word and watch it finger-spelled.
 - **Grown-ups area** — progress backup, daily goal, media attribution, and privacy details.
@@ -39,9 +52,10 @@ in front of the camera, play games, and collect stickers — completely offline.
 
 - Letters are recognized with [Google MediaPipe Hand Landmarker](https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker)
   plus a nearest-neighbour classifier trained on real hand landmarks (see below).
-- **ق, م and غ are guided practice** — the hand detector cannot see those handshapes
-  reliably, so the app never pretends to grade them.
-- Numbers and word signs need movement or both hands, so they are guided practice too.
+- **English J and Z are guided practice** — they need motion, so a static model never
+  grades them. Numbers and word signs need movement or both hands.
+- The acceptance gate is deliberately strict (tuned on held-out data): it prefers saying
+  "not yet" over a wrong "You did it!".
 - A camera match means "the handshape looks like this letter" — it is **not** a measure
   of the child's ability.
 
@@ -59,13 +73,18 @@ in front of the camera, play games, and collect stickers — completely offline.
 
 ## Data sources & credits
 
-- **Hand photographs & recognition training data:** Ali Imran Ali (2021),
+- **Urdu/PSL hand photographs (signer 1):** Ali Imran Ali (2021),
   *"Data set about hand configuration of Pakistan Sign Language"*, Mendeley Data, V1,
   [doi:10.17632/y9svrbh27n.1](https://data.mendeley.com/datasets/y9svrbh27n/1) —
   **CC BY 4.0**. Accompanying paper: Imran et al. (2021), *Data in Brief* 36, 107021,
   [doi:10.1016/j.dib.2021.107021](https://doi.org/10.1016/j.dib.2021.107021).
   Photographs are used unmodified apart from resizing; the classifier was trained on
   hand landmarks extracted from the same dataset.
+- **PSL gesture landmarks (signer 2):** [Bakhtyar12/Pakistani-Sign-Language](https://huggingface.co/datasets/Bakhtyar12/Pakistani-Sign-Language),
+  Hugging Face, **MIT** — MediaPipe landmark sequences for all Urdu letters, used to make
+  recognition robust across different hands.
+- **English letters:** Ayush Thakur, [ASL Dataset](https://www.kaggle.com/datasets/ayuraj/asl-dataset) (**CC0**)
+  and [SignAlphaSet](https://data.mendeley.com/datasets/8fmvr9m98w/1) (Mendeley, **CC BY 4.0**).
 - **PSL learning resources:** [Deaf Reach / PSL Dictionary](https://psl.org.pk/) —
   their videos are *not* bundled; the app links to them for guided practice.
 - Reproducible training pipeline: `tools/train_psl_landmarks.py`;

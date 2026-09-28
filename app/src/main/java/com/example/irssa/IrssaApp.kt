@@ -229,7 +229,7 @@ fun LessonDetail(lesson: Lesson,state: LearnerState,onFavorite: ()->Unit,onPract
       IconButton(onClick=onFavorite) { Icon(if(lesson.id in state.favorites) Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder,"Favorite this sign",tint=Purple) }
     } }
     item { SignMedia(lesson,Modifier.fillMaxWidth().height(if(lesson.isVideo) 320.dp else 290.dp)) }
-    item { Text(if(lesson.media.isBlank()) "Guided practice · learn with a PSL teacher (psl.org.pk)" else "Ali Imran Ali · PSL Dataset, CC BY 4.0 · Real hand photograph",fontSize=10.sp,color=Muted) }
+    item { Text(if(lesson.media.isBlank()) "Guided practice · learn with a teacher (psl.org.pk)" else "${lesson.author} · ${lesson.license} · Real hand photograph",fontSize=10.sp,color=Muted) }
     if(lesson.title in listOf("J","Z") && lesson.category=="Letters") item { Surface(color=Peach,shape=RoundedCornerShape(18.dp)) {
       Text("${lesson.title} needs movement. This photo is a handshape reference. Follow the motion with a grown-up; the camera does not grade this letter.",Modifier.padding(16.dp),color=Ink)
     } }

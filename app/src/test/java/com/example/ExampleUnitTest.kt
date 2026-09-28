@@ -27,6 +27,11 @@ class ExampleUnitTest {
       assertTrue("Missing PSL letter $id", alphabetLetters.contains(id))
     }
 
+    // 26 English (ASL) letters present, distinct from the Urdu PSL set
+    val english = LearningDataSource.englishAlphabetItems
+    assertEquals(26, english.size)
+    assertTrue(english.none { it.id in alphabetLetters })
+
     // 0 to 50 numbers present
     val numbers = LearningDataSource.numberItems
     assertEquals(51, numbers.size)

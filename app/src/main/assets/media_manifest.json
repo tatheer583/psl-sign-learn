@@ -995,5 +995,265 @@
   "author": "Deaf Reach / PSL Dictionary (reference link only)",
   "license": "No media bundled — guided practice",
   "note": "No redistributable PSL word video was available. Practise with a teacher; nothing is substituted."
+ },
+ {
+  "id": "letter_en_a",
+  "file": "signs/en_letter_a.jpg",
+  "type": "image",
+  "gloss": "ASL letter A",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "039c278dc052e01fde33c4aea12dfab57f7c4f145a69dbceec74fa3572740b8f"
+ },
+ {
+  "id": "letter_en_b",
+  "file": "signs/en_letter_b.jpg",
+  "type": "image",
+  "gloss": "ASL letter B",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "69ffc977edec654e697fa0a83ffe5c22f43b625cb0e36b52aef736a32c33921c"
+ },
+ {
+  "id": "letter_en_c",
+  "file": "signs/en_letter_c.jpg",
+  "type": "image",
+  "gloss": "ASL letter C",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "3b39b8fb55a6e0063d13c5a0c316b39f94ed44433fe127ff6defd05b50fae45a"
+ },
+ {
+  "id": "letter_en_d",
+  "file": "signs/en_letter_d.jpg",
+  "type": "image",
+  "gloss": "ASL letter D",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "e039a7149c67905394a68501f22fb97c44aebd89ff1643a9b2ff90f614b70ad7"
+ },
+ {
+  "id": "letter_en_e",
+  "file": "signs/en_letter_e.jpg",
+  "type": "image",
+  "gloss": "ASL letter E",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "0d316eb1969adf07192acb0510dcd4f1840e69c0c4d0846dd9315aebc5ef0968"
+ },
+ {
+  "id": "letter_en_f",
+  "file": "signs/en_letter_f.jpg",
+  "type": "image",
+  "gloss": "ASL letter F",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "9317b1d875ad3a0918dfc6b9e6d785ba74f8d935eb76b91d475a7284dbbe678f"
+ },
+ {
+  "id": "letter_en_g",
+  "file": "signs/en_letter_g.jpg",
+  "type": "image",
+  "gloss": "ASL letter G",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "7345ad5dbe49a3b9b0ab6d6145d6c9f5c8f57bd5380b93ff39429ff58610525d"
+ },
+ {
+  "id": "letter_en_h",
+  "file": "signs/en_letter_h.jpg",
+  "type": "image",
+  "gloss": "ASL letter H",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "b7808e83d978acaf327dcd2a5ec42b735d6e0a0d44f22884489bb375ad4b9987"
+ },
+ {
+  "id": "letter_en_i",
+  "file": "signs/en_letter_i.jpg",
+  "type": "image",
+  "gloss": "ASL letter I",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "226f19661cf57519ab97ef5b76c75f74b413097849842a2183fdaca8c4e8d827"
+ },
+ {
+  "id": "letter_en_j",
+  "file": "signs/en_letter_j.jpg",
+  "type": "image",
+  "gloss": "ASL letter J",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "65b183c173ba7c152968a614cc8223325d8d1bf2e8994374561c10a2ba46ae19"
+ },
+ {
+  "id": "letter_en_k",
+  "file": "signs/en_letter_k.jpg",
+  "type": "image",
+  "gloss": "ASL letter K",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "3c0d9ad1c99ddd4f4347e35b3a62de5833dd82a07b07417415010c8d05c3131d"
+ },
+ {
+  "id": "letter_en_l",
+  "file": "signs/en_letter_l.jpg",
+  "type": "image",
+  "gloss": "ASL letter L",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "0e641284158baed33e08d943a033f4546adcfda997d7bd53a76ec9dcd3b72946"
+ },
+ {
+  "id": "letter_en_m",
+  "file": "signs/en_letter_m.jpg",
+  "type": "image",
+  "gloss": "ASL letter M",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "da40f2b85e1c3f27b1679f0527364dd0ba585a1470b93cabfbe29c85c3e08409"
+ },
+ {
+  "id": "letter_en_n",
+  "file": "signs/en_letter_n.jpg",
+  "type": "image",
+  "gloss": "ASL letter N",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "a1ac0ee8c07ca8c35b8e45fdeffd72212f7c2054983f17cb4497791c649444c0"
+ },
+ {
+  "id": "letter_en_o",
+  "file": "signs/en_letter_o.jpg",
+  "type": "image",
+  "gloss": "ASL letter O",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "32e79b600ced5ef72d2f39e01975b01884980c81825cc2944d06171eb25b2c24"
+ },
+ {
+  "id": "letter_en_p",
+  "file": "signs/en_letter_p.jpg",
+  "type": "image",
+  "gloss": "ASL letter P",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "bef9e6770e1a29a9044a4bb93aeabf7e8ad1ae6d3939a4df69d953825eb3f806"
+ },
+ {
+  "id": "letter_en_q",
+  "file": "signs/en_letter_q.jpg",
+  "type": "image",
+  "gloss": "ASL letter Q",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "11021be63292fef8dd92a412ef8f2ac1740ad51d0cde2b828a702ed3458cbf58"
+ },
+ {
+  "id": "letter_en_r",
+  "file": "signs/en_letter_r.jpg",
+  "type": "image",
+  "gloss": "ASL letter R",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "a1c91a003ad7c4073d957afc4485c1263188f63176b86cca47013d2b99218385"
+ },
+ {
+  "id": "letter_en_s",
+  "file": "signs/en_letter_s.jpg",
+  "type": "image",
+  "gloss": "ASL letter S",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "7d639c8b9703c9138d19f57314e9830c9fe1943d0e61d42c72e834a684304957"
+ },
+ {
+  "id": "letter_en_t",
+  "file": "signs/en_letter_t.jpg",
+  "type": "image",
+  "gloss": "ASL letter T",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "f0465163c973e685d47ead4bab53d286c1513d8f23695db690bc0c1df83ae2f3"
+ },
+ {
+  "id": "letter_en_u",
+  "file": "signs/en_letter_u.jpg",
+  "type": "image",
+  "gloss": "ASL letter U",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "2beb3abc8541cd157efa9da87c1d2b109cdc80d2a2f27881245f178f9dd1264f"
+ },
+ {
+  "id": "letter_en_v",
+  "file": "signs/en_letter_v.jpg",
+  "type": "image",
+  "gloss": "ASL letter V",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "de468b742befbbdfaf3a07a3259d05e6a454a567fa99459220479bff6e2b3867"
+ },
+ {
+  "id": "letter_en_w",
+  "file": "signs/en_letter_w.jpg",
+  "type": "image",
+  "gloss": "ASL letter W",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "84f60c5c4918de75865dde94d5d62ac3bb0f4a40f136b773ee228bf0b831ded1"
+ },
+ {
+  "id": "letter_en_x",
+  "file": "signs/en_letter_x.jpg",
+  "type": "image",
+  "gloss": "ASL letter X",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "f335a4e1af9fe6635508c94832beaba4c9bfd19479aaba8a4dfb7e98e77c2759"
+ },
+ {
+  "id": "letter_en_y",
+  "file": "signs/en_letter_y.jpg",
+  "type": "image",
+  "gloss": "ASL letter Y",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "823d500596ba6c1704ff8ab29c9a0a8503a54eca40a55cce8ba1b005622fcad9"
+ },
+ {
+  "id": "letter_en_z",
+  "file": "signs/en_letter_z.jpg",
+  "type": "image",
+  "gloss": "ASL letter Z",
+  "source": "https://www.kaggle.com/datasets/ayuraj/asl-dataset",
+  "author": "Ayush Thakur, ASL Dataset (CC0)",
+  "license": "CC0 1.0",
+  "sha256": "f349ab6ce039a5a04b55c917ca53eca6c88bb6afc8865c7649c79b5a1aaff79d"
  }
 ]
