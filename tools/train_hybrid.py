@@ -139,6 +139,15 @@ def build_english(report):
         aX, ay = balance(aX, ay, 150)
         sources.append((aX, ay, np.array(['SAS'] * len(ay)), 1))
         print('SignAlphaSet samples:', len(ay))
+    fesf = ROOT / 'tools' / 'fesf-psl-english-landmarks.npz'
+    fesf_used = False
+    if fesf.exists():
+        # LOCAL-USE ONLY: FESF/psl.org.pk content is (c) FESF, all rights reserved.
+        # A model containing it must never be pushed to GitHub or shipped publicly.
+        fx, fy2, fgrp = load(fesf)
+        sources.append((np.vstack([fx] * 2), np.concatenate([fy2] * 2), fgrp, 1))
+        fesf_used = True
+        print('FESF PSL-English samples (LOCAL ONLY, weight x2):', len(fy2))
     personal = ROOT / 'tools' / 'my-hand-landmarks.npz'
     if personal.exists():
         pX, py, ph = load(personal)
@@ -167,6 +176,9 @@ def build_english(report):
         for vec, lbl in zip(X, y):
             f.write(struct.pack('>i', idx[lbl]))
             f.write(struct.pack('>63f', *vec))
+    if fesf_used:
+        print('!! WARNING: english.bin contains FESF-derived data. Do NOT commit or push !!')
+        report['evaluation']['english']['fesfLocalOnly'] = True
     report['evaluation']['english'] = {
         'sources': ['CC0 ASL Kaggle dataset (hand groups hand1-hand5)',
                     'personal capture x%d' % PERSONAL_WEIGHT],
