@@ -24,7 +24,7 @@ object LandmarkFeatures {
 class LandmarkClassifier(input: InputStream) {
   private val labels: List<String>;private val features: Array<FloatArray>;private val targets: IntArray
   init { DataInputStream(input.buffered()).use { s ->
-    require(s.readInt()==0x49525353);val count=s.readInt();require(count in 1..20000);require(s.readInt()==63)
+    require(s.readInt()==0x49525353);val count=s.readInt();require(count in 1..50000);require(s.readInt()==63)
     val classes=s.readInt();require(classes in 1..64);labels=List(classes) { s.readUTF() };targets=IntArray(count)
     features=Array(count) { i -> targets[i]=s.readInt();require(targets[i] in labels.indices);FloatArray(63) { s.readFloat() } }
   } }
