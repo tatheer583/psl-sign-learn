@@ -52,3 +52,5 @@ tools/page.html
 # FESF/psl.org.pk derived data - local use only, never redistribute
 tools/fesf-psl-english-landmarks.npz
 tools/fesf-failures.json
+tools/kaggle-asl-landmarks.npz
+tools/kaggle-asl-failures.json

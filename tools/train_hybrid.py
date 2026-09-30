@@ -148,6 +148,15 @@ def build_english(report):
         sources.append((np.vstack([fx] * 2), np.concatenate([fy2] * 2), fgrp, 1))
         fesf_used = True
         print('FESF PSL-English samples (LOCAL ONLY, weight x2):', len(fy2))
+    kg = ROOT / 'tools' / 'kaggle-asl-landmarks.npz'
+    if kg.exists():
+        # LOCAL-USE ONLY: grassknoted/asl-alphabet is GPL 2 on Kaggle; the derived
+        # model inherits share-alike obligations - keep it out of the public repo.
+        gx, gy2, ggrp = load(kg)
+        gx, gy2 = balance(gx, gy2, 200)
+        sources.append((gx, gy2, ggrp, 1))
+        fesf_used = True
+        print('Kaggle ASL-alphabet samples (LOCAL ONLY, GPL2 source):', len(gy2))
     personal = ROOT / 'tools' / 'my-hand-landmarks.npz'
     if personal.exists():
         pX, py, ph = load(personal)

@@ -338,7 +338,7 @@
       "personIndependentAccuracy": 0.8622448979591837,
       "personIndependentAccuracyWithSignAlphaSet": 0.8469387755102041,
       "heldOutGroup": "hand5",
-      "trainSamples": 13896,
+      "trainSamples": 23284,
       "classes": [
         "A",
         "B",
@@ -365,7 +365,7 @@
         "X",
         "Y"
       ],
-      "sha256": "3d45461aabfcf35368f3833f1f9b05142f74641be28ecb159c321181b424e94a"
+      "sha256": "de3264c2e8bfe9484c8fb5c55e1a02e26a0f682d7e333698fb186ce0853ea8ab"
     }
   },
   "labels": [
