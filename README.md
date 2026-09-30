@@ -1,11 +1,19 @@
 <div align="center">
 
+<img src="docs/banner.png" alt="Irssa — Learn Pakistan Sign Language" width="100%"/>
+
 # Irssa — ارسا 🌈
 
 **پاکستان سائن لینگویج سیکھیں · Learn Pakistan Sign Language**
 
 *A learning game for deaf and speech-impaired children — built with real hands,
 real data, and a lot of love.* ❤️
+
+![Platform](https://img.shields.io/badge/platform-Android%207%2B-3DDC84?logo=android&logoColor=white)
+![Offline](https://img.shields.io/badge/works-100%25%20offline-5C52E5)
+![Letters](https://img.shields.io/badge/letters-37%20Urdu%20%2B%2026%20English-FF5E7E)
+![Built with](https://img.shields.io/badge/built%20with-Kotlin%20·%20Compose%20·%20MediaPipe-7F52FF?logo=kotlin&logoColor=white)
+![Data](https://img.shields.io/badge/data-CC%20BY%204.0%20·%20MIT%20·%20CC0-00B894)
 
 Every deaf child deserves to see her language on a screen and think *"that's my hands."*
 Irssa is built for that moment — the moment a letter finally clicks, the camera smiles,
