@@ -12,6 +12,7 @@ on:
       - 'gradle/**'
       - '*.gradle.kts'
       - 'gradle.properties'
+      - 'gradlew'
   workflow_dispatch:
 
 permissions:
