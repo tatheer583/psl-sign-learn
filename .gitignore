@@ -16,6 +16,12 @@
 local.properties
 .env
 
+# Node / web app
+node_modules/
+web/dist/
+web/.vite/
+.vite/
+
 # Large local data, training artifacts and archives (kept out of the repository)
 /app/build
 /build-*.log

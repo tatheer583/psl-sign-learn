@@ -1,0 +1,11 @@
+{
+  "name": "irssa-new-dataset-tools",
+  "private": true,
+  "type": "module",
+  "description": "Extract + train landmarks for the saadbutt321/Pakistan-Sign-Language dataset (OpenPose 21-point hands).",
+  "dependencies": {
+    "iconv-lite": "^0.7.3",
+    "jszip": "^3.10.1",
+    "sql.js": "^1.10.3"
+  }
+}

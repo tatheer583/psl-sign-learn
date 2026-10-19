@@ -123,6 +123,12 @@ This app stands on real hands and generous datasets:
 - **PSL gesture landmarks (signer 2):** [Bakhtyar12/Pakistani-Sign-Language](https://huggingface.co/datasets/Bakhtyar12/Pakistani-Sign-Language),
   Hugging Face, **MIT** — landmark sequences for every Urdu letter, which made recognition
   honest across different hands.
+- **PSL landmark dataset (signer 3+):** [saadbutt321/Pakistan-Sign-Language](https://www.kaggle.com/datasets/saadbutt321/pakistan-sign-language-dataset),
+  Kaggle — OpenPose 21-point hand landmarks for all 37 Urdu letters plus 12 common
+  words, extracted with `tools/new_dataset/extract_new_dataset.mjs`. **No license
+  file ships with the dataset**; verify its Kaggle listing before any public
+  redistribution of extracted features. It measurably improved cross-person
+  generalization (see `docs/recognition-evaluation.json`).
 - **English letters:** Ayush Thakur, [ASL Dataset](https://www.kaggle.com/datasets/ayuraj/asl-dataset) (**CC0**)
   and [SignAlphaSet](https://data.mendeley.com/datasets/8fmvr9m98w/1) (Mendeley, **CC BY 4.0**).
 - **PSL learning resources:** [Deaf Reach / PSL Dictionary](https://psl.org.pk/) — the
@@ -132,6 +138,16 @@ This app stands on real hands and generous datasets:
 *You can also train with private family recordings locally (e.g. a personal dataset like
 the FESF dictionary materials) — the tools support it, and such data stays on your
 computer, out of this repository, out of respect for its rights holders.*
+
+## 📜 License
+
+The **code** of Irssa (Android app, web app, training tools) is **MIT** — see
+[LICENSE](LICENSE). The datasets that power the recognition models keep their own
+licenses as listed above; model binaries and learning content are built from them
+and are offered here under the same attribution spirit. The Kaggle
+[saadbutt321/Pakistan-Sign-Language](https://www.kaggle.com/datasets/saadbutt321/pakistan-sign-language-dataset)
+dataset ships no license file — check its listing before redistributing derived
+artifacts.
 
 ---
 

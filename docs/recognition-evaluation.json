@@ -58,221 +58,221 @@
       "caveat": "Same-session frames may repeat; person-independent accuracy is not established.",
       "perClass": {
         "ain": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.5,
           "f1-score": 0.6666666666666666,
-          "support": 2.0
+          "support": 2
         },
         "alif": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "bari_yeh": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "be": {
           "precision": 0.8888888888888888,
-          "recall": 1.0,
+          "recall": 1,
           "f1-score": 0.9411764705882353,
-          "support": 8.0
+          "support": 8
         },
         "che": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "chhoti_yeh": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "dal": {
           "precision": 0.875,
           "recall": 0.875,
           "f1-score": 0.875,
-          "support": 8.0
+          "support": 8
         },
         "dhal": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.8333333333333334,
           "f1-score": 0.9090909090909091,
-          "support": 6.0
+          "support": 6
         },
         "fay": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.875,
           "f1-score": 0.9333333333333333,
-          "support": 8.0
+          "support": 8
         },
         "gaf": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 4.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 4
         },
         "hamza": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 6.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 6
         },
         "hay": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "he": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 3.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 3
         },
         "jim": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 7.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 7
         },
         "kaf": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "khe": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 5.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 5
         },
         "laam": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 3.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 3
         },
         "noon": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 3.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 3
         },
         "pe": {
           "precision": 0.875,
-          "recall": 1.0,
+          "recall": 1,
           "f1-score": 0.9333333333333333,
-          "support": 7.0
+          "support": 7
         },
         "re": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.5,
           "f1-score": 0.6666666666666666,
-          "support": 2.0
+          "support": 2
         },
         "rre": {
           "precision": 0.8571428571428571,
-          "recall": 1.0,
+          "recall": 1,
           "f1-score": 0.9230769230769231,
-          "support": 6.0
+          "support": 6
         },
         "se": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 10.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 10
         },
         "seen": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 5.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 5
         },
         "sheen": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 3.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 3
         },
         "swad": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 5.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 5
         },
         "te": {
           "precision": 0.9,
-          "recall": 1.0,
+          "recall": 1,
           "f1-score": 0.9473684210526315,
-          "support": 9.0
+          "support": 9
         },
         "toay": {
           "precision": 0.8,
-          "recall": 1.0,
+          "recall": 1,
           "f1-score": 0.8888888888888888,
-          "support": 8.0
+          "support": 8
         },
         "tte": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 10.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 10
         },
         "vao": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "zal": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.875,
           "f1-score": 0.9333333333333333,
-          "support": 8.0
+          "support": 8
         },
         "ze": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 3.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 3
         },
         "zhe": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "zoay": {
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.8333333333333334,
           "f1-score": 0.9090909090909091,
-          "support": 6.0
+          "support": 6
         },
         "zwad": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1-score": 1.0,
-          "support": 8.0
+          "precision": 1,
+          "recall": 1,
+          "f1-score": 1,
+          "support": 8
         },
         "accuracy": 0.967741935483871,
         "macro avg": {
           "precision": 0.9763538748832867,
           "recall": 0.9497549019607845,
           "f1-score": 0.9566772310329952,
-          "support": 217.0
+          "support": 217
         },
         "weighted avg": {
           "precision": 0.9717924804330335,
           "recall": 0.967741935483871,
           "f1-score": 0.9665793753280022,
-          "support": 217.0
+          "support": 217
         }
       },
       "sha256": "e4a96b6ab139c3139af3746a8c84c1fabdaa933ba845cbaa81abede04a71e4c8"
@@ -407,5 +407,78 @@
   "hybrid": {
     "trained": "2026-09-29",
     "gate": "agreement>=0.95, rms<=0.07"
+  },
+  "newKaggleDataset": {
+    "trained": "2026-10-19",
+    "source": "Kaggle saadbutt321/pakistan-sign-language-dataset (OpenPose 21-point hands, z = 0)",
+    "pipeline": "tools/new_dataset/extract_new_dataset.mjs -> tools/new-psl-landmarks.npz -> tools/new_dataset/train_psl_hybrid.mjs",
+    "mergedSources": [
+      {
+        "name": "original shipped psl.bin (git HEAD): Mendeley signer A + HF signer B + personal captures, already augmented",
+        "n": 10476,
+        "unique": 10456
+      },
+      {
+        "name": "Hugging Face Bakhtyar12 (MIT), signer B",
+        "unique": 18000,
+        "shipped": 17330
+      },
+      {
+        "name": "Kaggle saadbutt321 (OpenPose), weighted x5 in the shipped bin",
+        "unique": 4933,
+        "shipped": 14040
+      }
+    ],
+    "classes": [
+      "ain",
+      "alif",
+      "bari_yeh",
+      "be",
+      "che",
+      "chhoti_yeh",
+      "dal",
+      "dhal",
+      "fay",
+      "gaf",
+      "ghain",
+      "hamza",
+      "hay",
+      "he",
+      "jim",
+      "kaf",
+      "khe",
+      "laam",
+      "meem",
+      "noon",
+      "pe",
+      "qaf",
+      "re",
+      "rre",
+      "se",
+      "seen",
+      "sheen",
+      "swad",
+      "te",
+      "toay",
+      "tte",
+      "vao",
+      "zal",
+      "ze",
+      "zhe",
+      "zoay",
+      "zwad"
+    ],
+    "trainSamples": 41564,
+    "perClassOverallCap": 900,
+    "crossPersonAccuracy": {
+      "oldSources_to_newKaggle": 0.371579160754105,
+      "newKaggle_to_hfSignerB": 0.4638095238095238
+    },
+    "crossPersonEvalFrames": {
+      "oldSources_to_newKaggle": 4933,
+      "newKaggle_to_hfSignerB": 2100
+    },
+    "crossPersonNote": "Unique frames only; evaluation pools contain no duplicated or augmented copies (leak-proof). Both directions also cross capture systems (MediaPipe <-> 2D OpenPose), so they are a conservative lower bound. Previous shipped-model cross-person estimate: mendeley_to_hf 0.357, hf_to_mendeley 0.369.",
+    "sha256": "7dd0be4db9a561cfc8fa65d04e6a286749559ad6e8128a3b2df4598b209b3a96"
   }
 }

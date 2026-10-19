@@ -80,6 +80,18 @@ def build_psl(report):
     hA_y = np.concatenate([hy, hy])
     sources = [(mA_X, mA_y, np.array(['MSA'] * len(mA_y)), 1),
                (hA_X, hA_y, np.array(['HF'] * len(hA_y)), 1)]
+    # NEW: Kaggle saadbutt321/Pakistan-Sign-Language (OpenPose 21-point hands, z = 0).
+    # Produced by tools/new_dataset/extract_new_dataset.mjs; see the docs for
+    # provenance and the duplicate/leak rules. Weighted x5, like personal captures.
+    new_path = ROOT / 'tools' / 'new-psl-landmarks.npz'
+    if new_path.exists():
+        nX, ny, ng = load(new_path)
+        nA_X = np.vstack([nX, np.stack([rotate_jitter(v) for v in nX])])
+        nA_y = np.concatenate([ny, ny])
+        sources.append((np.vstack([nA_X] + [nA_X] * (PERSONAL_WEIGHT - 1)),
+                        np.concatenate([nA_y] * PERSONAL_WEIGHT),
+                        np.array(['NEW'] * (len(nA_y) * PERSONAL_WEIGHT)), 1))
+        print('new Kaggle PSL samples:', len(nX), 'unique (OpenPose), x%d' % PERSONAL_WEIGHT)
     personal = ROOT / 'tools' / 'my-hand-landmarks.npz'
     if personal.exists():
         pX, py, ph = load(personal)
