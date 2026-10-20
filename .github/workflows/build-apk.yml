@@ -36,7 +36,16 @@ jobs:
           java-version: '17'
 
       - name: Build debug APK
-        run: ./gradlew :app:assembleDebug --no-daemon
+        run: |
+          set -o pipefail
+          ./gradlew :app:assembleDebug --no-daemon 2>&1 | tee build.log
+
+      # Workflow logs are only readable by admins, but ::error:: workflow
+      # commands become public check annotations we can read from anywhere.
+      - name: Emit gradle error tail
+        if: failure()
+        run: |
+          grep -E "error|failure|caused by|what went wrong" -i -A 2 build.log | tail -40 | while IFS= read -r line; do echo "::error::$line"; done
 
       # The committed file is what the README "Download & install" section
       # links to; keep the same name for a stable link.
