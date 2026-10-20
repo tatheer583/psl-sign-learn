@@ -1,9 +1,11 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CameraPractice, type CameraReading } from '../components/CameraPractice';
 import { Confetti } from '../components/Confetti';
 import { PageHeader, StarChip, ProgressRing } from '../components/Pieces';
+import { SignMediaView } from '../components/SignMediaView';
 import { itemById } from '../content/types';
+import { loadLessons, type Lesson } from '../lib/lessons';
 import { useStore } from '../store/store';
 import { buzz, cssColor } from '../lib/util';
 
@@ -18,6 +20,7 @@ export function CameraStudioScreen() {
   const [burst, setBurst] = useState(0);
   const [reading, setReading] = useState<CameraReading | null>(null);
   const [guess, setGuess] = useState('');
+  const [lesson, setLesson] = useState<Lesson | null>(null);
 
   const mode = (params.get('mode') === 'english' ? 'english' : 'psl') as 'psl' | 'english';
   const target = params.get('target');
@@ -36,6 +39,19 @@ export function CameraStudioScreen() {
       setBurst((b) => b + 1);
     }
   };
+
+  /** The example sign shown beside the camera: the lesson's real hand photo. */
+  const targetId = target ? normalizeTargetId(target) : null;
+  useEffect(() => {
+    let dead = false;
+    setLesson(null);
+    if (targetId) {
+      loadLessons()
+        .then((ls) => { if (!dead && ls) setLesson(ls.find((l) => l.id === targetId) ?? null); })
+        .catch(() => undefined);
+    }
+    return () => { dead = true; };
+  }, [targetId]);
 
   const onGuessKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== 'Enter') return;
@@ -64,7 +80,29 @@ export function CameraStudioScreen() {
         </div>
       )}
 
-      <CameraPractice mode={mode} target={target} targetDisplay={display} onReading={onReading} />
+      <div className={target ? 'practice-split' : ''}>
+        <div className={target ? 'split-cam' : ''}>
+          <CameraPractice mode={mode} target={target} targetDisplay={display} onReading={onReading} />
+        </div>
+        {target && (
+          <div className="split-ref">
+            {lesson ? (
+              <SignMediaView lesson={lesson} />
+            ) : (
+              <div className="sign-media placeholder">
+                <div
+                  className="sign-media-letter"
+                  style={{ color: cssColor(item?.colorHex ?? 0x2563eb) }}
+                >
+                  {display ?? target}
+                </div>
+                <div className="media-fallback">Open this letter's lesson to see the photo.</div>
+              </div>
+            )}
+            <div className="split-ref-label">👆 Copy this sign in the mirror</div>
+          </div>
+        )}
+      </div>
 
       <div className="practice-status">
         <ProgressRing progress={reading?.progress ?? 0} />
