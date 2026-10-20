@@ -460,3 +460,5 @@ button { font-family: inherit; }
 }
 .dict-chip.active { border-color: var(--cyan); background: #EAF8FB; color: #05667D; }
 .dict-chip:active { transform: scale(0.96); }
+.dict-player-actions { display: flex; align-items: center; gap: 10px; }
+.dict-pos { color: var(--muted); font-size: .78rem; font-weight: 700; }

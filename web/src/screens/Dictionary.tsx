@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { assetUrl } from '../lib/util';
 import {
@@ -23,6 +23,8 @@ export function DictionaryScreen() {
   const [q, setQ] = useState('');
   const [picked, setPicked] = useState<PslDictEntry | null>(null);
   const [limit, setLimit] = useState(PAGE_SIZE);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const autoPlayRef = useRef(false);
 
   useEffect(() => {
     let dead = false;
@@ -40,6 +42,23 @@ export function DictionaryScreen() {
     [index, q, defaultWords],
   );
   const visible = results.slice(0, limit);
+  const pos = picked ? results.findIndex((w) => w.path === picked.path) : -1;
+
+  /** Playlist step: next sign in the current list (wraps to the start). */
+  const playNext = () => {
+    if (!results.length) return;
+    const next = results[(pos + 1) % results.length] ?? results[0];
+    autoPlayRef.current = true;
+    setPicked(next);
+  };
+
+  // "Next" (and auto-advance after a video ends) starts playing immediately.
+  useEffect(() => {
+    if (autoPlayRef.current && picked) {
+      autoPlayRef.current = false;
+      videoRef.current?.play().catch(() => { /* tap the big play button */ });
+    }
+  }, [picked]);
 
   return (
     <div className="page">
@@ -77,16 +96,27 @@ export function DictionaryScreen() {
         <div className="dict-player">
           {picked.video ? (
             <video
+              key={picked.path}
+              ref={videoRef}
               className="dict-video"
               src={picked.video}
               poster={picked.poster ?? picked.image}
               controls
               preload="none"
               playsInline
+              onEnded={() => playNext()}
             />
           ) : (
             <div className="dict-novideo">🎬 The official page has the full entry.</div>
           )}
+          <div className="dict-player-actions">
+            <button className="btn primary" onClick={() => playNext()}>
+              ▶ Next sign
+            </button>
+            {pos >= 0 && (
+              <span className="dict-pos">{pos + 1} / {results.length}</span>
+            )}
+          </div>
           <div className="dict-attr">
             <div className="dict-attr-head">
               <b>{picked.term}</b>
