@@ -464,16 +464,19 @@ button { font-family: inherit; }
 .dict-pos { color: var(--muted); font-size: .78rem; font-weight: 700; }
 .stts-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* ---------- camera studio split: mirror + example sign ---------- */
+/* ---------- camera studio split: mirror + live gesture panel ---------- */
 .practice-split { display: flex; gap: 12px; align-items: stretch; }
 .practice-split .split-cam { flex: 1.3; min-width: 0; }
 .practice-split .split-ref {
   flex: 1; min-width: 0; display: grid; place-items: center; gap: 6px;
 }
 .practice-split .split-ref .sign-media { width: 100%; max-width: 380px; }
-.split-ref-label { text-align: center; font-weight: 800; color: var(--muted); font-size: .85rem; }
+.split-ref-label { text-align: center; font-weight: 700; color: var(--muted); font-size: .9rem; }
+.split-ref-label b { font-weight: 800; }
+.practice-split.hit .split-ref .sign-media { outline: 3px solid #22C55E; outline-offset: 2px; }
+.practice-split.hit .split-ref-label { color: #008537; }
 @media (max-width: 640px) {
   .practice-split { flex-direction: column; }
-  .practice-split .split-ref { order: -1; } /* example first on phones: look, then copy */
+  .practice-split .split-ref { order: -1; } /* gesture panel on top on phones: above the mirror */
   .practice-split .split-ref .sign-media { max-width: 290px; }
 }

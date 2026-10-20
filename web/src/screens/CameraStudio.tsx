@@ -20,7 +20,18 @@ export function CameraStudioScreen() {
   const [burst, setBurst] = useState(0);
   const [reading, setReading] = useState<CameraReading | null>(null);
   const [guess, setGuess] = useState('');
-  const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [detected, setDetected] = useState<string | null>(null);
+
+  /** All bundled lessons — powers the "what your hand says" side panel. */
+  useEffect(() => {
+    let dead = false;
+    loadLessons()
+      .then((ls) => { if (!dead && ls) setLessons(ls); })
+      .catch(() => undefined);
+    return () => { dead = true; };
+  }, []);
+  const lessonById = useMemo(() => new Map(lessons.map((l) => [l.id, l])), [lessons]);
 
   const mode = (params.get('mode') === 'english' ? 'english' : 'psl') as 'psl' | 'english';
   const target = params.get('target');
@@ -33,6 +44,7 @@ export function CameraStudioScreen() {
 
   const onReading = (r: CameraReading) => {
     setReading(r);
+    if (r.label) setDetected((prev) => (prev === r.label ? prev : r.label)); // remember last known shape
     if (r.confirmed && target != null) {
       buzz([0, 150, 60, 150]);
       reward(normalizeTargetId(target), 'camera');
@@ -40,18 +52,12 @@ export function CameraStudioScreen() {
     }
   };
 
-  /** The example sign shown beside the camera: the lesson's real hand photo. */
+  /** Side panel: the sign matching the user's CURRENT gesture — else the target example. */
   const targetId = target ? normalizeTargetId(target) : null;
-  useEffect(() => {
-    let dead = false;
-    setLesson(null);
-    if (targetId) {
-      loadLessons()
-        .then((ls) => { if (!dead && ls) setLesson(ls.find((l) => l.id === targetId) ?? null); })
-        .catch(() => undefined);
-    }
-    return () => { dead = true; };
-  }, [targetId]);
+  const shown =
+    (detected ? lessonById.get(normalizeTargetId(detected)) : null) ??
+    (targetId ? lessonById.get(targetId) : null) ??
+    null;
 
   const onGuessKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== 'Enter') return;
@@ -80,28 +86,28 @@ export function CameraStudioScreen() {
         </div>
       )}
 
-      <div className={target ? 'practice-split' : ''}>
-        <div className={target ? 'split-cam' : ''}>
+      <div className={`practice-split ${reading?.confirmed ? 'hit' : ''}`}>
+        <div className="split-cam">
           <CameraPractice mode={mode} target={target} targetDisplay={display} onReading={onReading} />
         </div>
-        {target && (
-          <div className="split-ref">
-            {lesson ? (
-              <SignMediaView lesson={lesson} />
-            ) : (
-              <div className="sign-media placeholder">
-                <div
-                  className="sign-media-letter"
-                  style={{ color: cssColor(item?.colorHex ?? 0x2563eb) }}
-                >
-                  {display ?? target}
-                </div>
-                <div className="media-fallback">Open this letter's lesson to see the photo.</div>
-              </div>
+        <div className="split-ref">
+          {shown ? (
+            <SignMediaView lesson={shown} />
+          ) : (
+            <div className="sign-media placeholder">
+              <div className="sign-media-letter" style={{ color: cssColor(0x0ea5e9) }}>👋</div>
+              <div className="media-fallback">Show any sign in the mirror.</div>
+            </div>
+          )}
+          <div className="split-ref-label">
+            {shown && !targetId && <>Looks like <b className="urdu">{shown.item.title}</b> 👋</>}
+            {shown && targetId && shown.id !== targetId && (
+              <>You're showing <b className="urdu">{shown.item.title}</b> — target is <b className="urdu">{display}</b></>
             )}
-            <div className="split-ref-label">👆 Copy this sign in the mirror</div>
+            {shown && targetId && shown.id === targetId && <>🎯 <b className="urdu">{shown.item.title}</b> — that's it!</>}
+            {!shown && 'Show any sign — I say what it is'}
           </div>
-        )}
+        </div>
       </div>
 
       <div className="practice-status">
