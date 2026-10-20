@@ -60,21 +60,46 @@ function primeVoice(): SpeechSynthesisVoice | null {
 }
 
 export function speak(text: string): void {
-  if (!ttsEnabled() || !text.trim()) return;
-  try {
-    const synth = window.speechSynthesis;
-    // Chrome silently drops an utterance when cancel() and speak() fire
-    // back-to-back; give the queue a beat whenever something is mid-flight.
-    if (synth.speaking || synth.pending) {
-      synth.cancel();
-      const utter = buildUtter(text);
-      window.setTimeout(() => { try { synth.speak(utter); } catch { /* ignore */ } }, 80);
-    } else {
-      synth.speak(buildUtter(text));
-    }
-  } catch {
-    /* graceful fallback */
+  if (ttsEnabled()) doSpeak(text);
+}
+
+/**
+ * Unconditional say-aloud — for explicit "Listen again" taps, which must
+ * work even when automatic voice playback is switched off.
+ */
+export function speakAlways(text: string): void {
+  if (ttsAvailable()) doSpeak(text);
+}
+
+/*
+ * One utterance at a time, with a generation token:
+ * every speak() invalidates every utterance scheduled before it, and the
+ * only timer that may fire is the newest. Older timers dying at cancel
+ * time is what fixes the "repeats the word again and again" ghosting.
+ */
+let speakToken = 0;
+let pendingTimer: number | null = null;
+
+function doSpeak(text: string): void {
+  if (!ttsAvailable() || !text.trim()) return;
+  const synth = window.speechSynthesis;
+  const token = ++speakToken;
+  if (pendingTimer !== null) {
+    window.clearTimeout(pendingTimer);
+    pendingTimer = null;
   }
+  // Chrome can silently drop an utterance when speak() lands mid-cancel;
+  // a beat after an actual cancel prevents that.
+  const wasBusy = synth.speaking || synth.pending;
+  synth.cancel();
+  const utter = buildUtter(text);
+  const start = () => {
+    pendingTimer = null;
+    if (token !== speakToken) return; // a newer voice request won — skip
+    try { synth.speak(utter); } catch { /* ignore */ }
+  };
+  if (wasBusy) pendingTimer = window.setTimeout(start, 80);
+  else start();
 }
 
 function buildUtter(text: string): SpeechSynthesisUtterance {

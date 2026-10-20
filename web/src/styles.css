@@ -462,3 +462,4 @@ button { font-family: inherit; }
 .dict-chip:active { transform: scale(0.96); }
 .dict-player-actions { display: flex; align-items: center; gap: 10px; }
 .dict-pos { color: var(--muted); font-size: .78rem; font-weight: 700; }
+.stts-actions { display: flex; gap: 10px; flex-wrap: wrap; }

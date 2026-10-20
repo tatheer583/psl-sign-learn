@@ -1,13 +1,14 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { itemById } from '../content/types';
 import { SignMediaView } from '../components/SignMediaView';
 import { PageHeader } from '../components/Pieces';
 import { loadLessons, type Lesson } from '../lib/lessons';
-import {
-  speak, speechRecognitionAvailable, startListening, ttsAvailable, ttsEnabled, setTtsEnabled,
-} from '../lib/tts';
 import { useStore } from '../store/store';
+import {
+  speak, speakAlways, speechRecognitionAvailable, startListening,
+  ttsAvailable, ttsEnabled, setTtsEnabled,
+} from '../lib/tts';
 
 /**
  * Port of SpeechToSignScreen — speak or type a word, watch it finger-spelled.
@@ -23,6 +24,7 @@ export function SpeechToSignScreen() {
   // from the checkbox (that display-only state made voice "mysteriously" die).
   const [voiceOn, setVoiceOn] = useState(() => ttsAvailable() && ttsEnabled());
   const [err, setErr] = useState<string | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     let dead = false;
@@ -102,6 +104,7 @@ export function SpeechToSignScreen() {
         className="text-input big"
         placeholder="…or type it here"
         value={word}
+        ref={inputRef}
         onChange={(e) => setWord(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && applyWord(word)}
         maxLength={40}
@@ -121,6 +124,20 @@ export function SpeechToSignScreen() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {word.trim() && (
+        <div className="stts-actions">
+          <button className="btn secondary" onClick={() => speakAlways(word.trim())}>
+            🔊 Listen again
+          </button>
+          <button
+            className="btn secondary"
+            onClick={() => { setWord(''); setErr(null); inputRef.current?.focus(); }}
+          >
+            ➡ Next word
+          </button>
         </div>
       )}
 
