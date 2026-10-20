@@ -21,20 +21,32 @@ let visionPromise: Promise<any> | null = null;
 
 export async function getVision(): Promise<any> {
   if (!visionPromise) {
-    visionPromise = FilesetResolver.forVisionTasks(assetUrl('marks/wasm/'));
+    // Never cache a rejected load: a single hiccup would brick the camera
+    // until a full page reload. Retry on the next attempt instead.
+    visionPromise = FilesetResolver.forVisionTasks(assetUrl('marks/wasm/')).catch((err) => {
+      visionPromise = null;
+      throw err;
+    });
   }
   return visionPromise;
 }
 
 export async function createHandLandmarker(numHands = 2): Promise<HandLandmarker> {
   const vision = await getVision();
-  return HandLandmarker.createFromOptions(vision, {
-    baseOptions: { modelAssetPath: assetUrl('marks/models/hand_landmarker.task'), delegate: 'GPU' },
-    runningMode: 'VIDEO',
+  const options = (delegate: 'GPU' | 'CPU') => ({
+    baseOptions: { modelAssetPath: assetUrl('marks/models/hand_landmarker.task'), delegate },
+    runningMode: 'VIDEO' as const,
     numHands,
     minHandDetectionConfidence: 0.6,
     minHandPresenceConfidence: 0.6,
   });
+  try {
+    return await HandLandmarker.createFromOptions(vision, options('GPU'));
+  } catch (gpuError) {
+    // Some phones/drivers refuse the WebGL delegate — recognition must still work.
+    console.warn('GPU delegate failed, falling back to CPU:', gpuError);
+    return HandLandmarker.createFromOptions(vision, options('CPU'));
+  }
 }
 
 /** Start a user-facing camera; returns a ref to the HTMLVideoElement (mirrored in CSS). */

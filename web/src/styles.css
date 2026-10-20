@@ -403,3 +403,51 @@ button { font-family: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .mic-btn.listening { animation: none; }
 }
+
+/* ---------- official PSL dictionary (FESF) ---------- */
+.dict-note { color: var(--muted); font-size: .8rem; margin: 0; }
+.dict-note b { color: var(--on-surface); }
+.dict-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.dict-card {
+  border: none; cursor: pointer; border-radius: 16px; padding: 10px 8px; text-align: center;
+  background: var(--surface); box-shadow: var(--shadow); display: flex; flex-direction: column;
+  align-items: center; gap: 5px; border-top: 4px solid var(--cyan);
+}
+.dict-card:active { transform: scale(0.99); }
+.dict-card img { width: 100%; height: 84px; object-fit: contain; border-radius: 10px; background: #F5F6FB; }
+.dict-fallback { font-size: 2rem; height: 84px; display: grid; place-items: center; }
+.dict-term { font-weight: 800; font-size: .82rem; line-height: 1.2; }
+.dict-urdu { color: var(--on-surface); font-size: .85rem; line-height: 1.15; }
+.dict-cat { color: var(--muted); font-size: .66rem; }
+.dict-count { color: var(--muted); font-size: .8rem; }
+.dict-more { width: 100%; }
+.dict-player {
+  background: var(--surface); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 8px; border-top: 4px solid var(--cyan);
+}
+.dict-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; background: #000; }
+.dict-novideo { aspect-ratio: 16 / 5; display: grid; place-items: center; color: var(--muted); background: var(--surface-variant); border-radius: 14px; }
+.dict-attr { color: var(--muted); font-size: .78rem; line-height: 1.5; }
+.dict-attr a { color: var(--primary); font-weight: 700; text-decoration: none; }
+.dict-attr-head { display: flex; align-items: center; gap: 6px; font-size: .92rem; }
+.dict-attr-urdu { font-size: .95rem; }
+.speaker-mini {
+  border: 1.5px solid var(--cyan); background: var(--surface); border-radius: 50%;
+  width: 30px; height: 30px; font-size: .85rem; cursor: pointer;
+}
+.speaker-mini:active { transform: scale(0.94); }
+.dict-lectures h3 { margin: 4px 0; }
+.dict-lecture-card {
+  background: var(--surface-variant); border-radius: var(--radius); padding: 12px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.dict-lecture-card h4 { margin: 0; }
+.dict-lecture-card p { margin: 0; font-size: .82rem; color: var(--muted); }
+
+/* ---------- lesson extras ---------- */
+.speaker-btn { border: none; background: transparent; font-size: 1.3rem; cursor: pointer; }
+.official-card { border-top: 4px solid var(--cyan); display: flex; flex-direction: column; gap: 8px; }
+.official-card h3 { margin: 0; font-size: .95rem; }
+.official-card video { width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; background: #000; }
+.official-note { color: var(--muted); font-size: .78rem; margin: 0; }
+.official-note a { color: var(--primary); font-weight: 700; text-decoration: none; }

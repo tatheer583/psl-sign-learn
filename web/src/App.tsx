@@ -12,6 +12,7 @@ import { SpeedMatchScreen } from './screens/SpeedMatch';
 import { AlphabetWordsScreen } from './screens/AlphabetWords';
 import { GestureConverterScreen } from './screens/GestureConverter';
 import { SpeechToSignScreen } from './screens/SpeechToSign';
+import { DictionaryScreen } from './screens/Dictionary';
 import { StickersScreen } from './screens/Stickers';
 import { FamilyScreen } from './screens/Family';
 
@@ -36,6 +37,7 @@ function Shell() {
           <Route path="/quiz" element={<GameQuizScreen />} />
           <Route path="/speed" element={<SpeedMatchScreen />} />
           <Route path="/alphabet-words" element={<AlphabetWordsScreen />} />
+          <Route path="/dictionary" element={<DictionaryScreen />} />
           <Route path="/converter" element={<GestureConverterScreen />} />
           <Route path="/speech" element={<SpeechToSignScreen />} />
           <Route path="/stickers" element={<StickersScreen />} />

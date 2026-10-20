@@ -132,8 +132,12 @@ This app stands on real hands and generous datasets:
 - **English letters:** Ayush Thakur, [ASL Dataset](https://www.kaggle.com/datasets/ayuraj/asl-dataset) (**CC0**)
   and [SignAlphaSet](https://data.mendeley.com/datasets/8fmvr9m98w/1) (Mendeley, **CC BY 4.0**).
 - **PSL learning resources:** [Deaf Reach / PSL Dictionary](https://psl.org.pk/) — the
-  heart of PSL learning in Pakistan. Their videos are *not* bundled; the app links to
-  them for guided practice, and we encourage families to learn directly from them.
+  heart of PSL learning in Pakistan. Irssa’s **Official Dictionary** screen (web) and
+  lesson pages **stream their official sign videos straight from FESF’s own CDN**,
+  with visible attribution on every item and a link back to `psl.org.pk`. Nothing is
+  re-hosted: the bundled search index holds metadata only
+  (`web/public/marks/psl-dictionary-index.json`). All dictionary © FESF — learn
+  directly from them when you can.
 
 *You can also train with private family recordings locally (e.g. a personal dataset like
 the FESF dictionary materials) — the tools support it, and such data stays on your

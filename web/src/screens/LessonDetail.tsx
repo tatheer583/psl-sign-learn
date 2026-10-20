@@ -6,6 +6,8 @@ import { SignMediaView } from '../components/SignMediaView';
 import { PageHeader, StarChip } from '../components/Pieces';
 import { useStore } from '../store/store';
 import { buzz, cssColor } from '../lib/util';
+import { speak } from '../lib/tts';
+import { entryForLesson, dictPageUrl, type PslDictEntry } from '../lib/pslDictionary';
 
 /** Port of the lesson detail (CameraPracticeScreen lesson pane). */
 export function LessonDetailScreen() {
@@ -13,13 +15,17 @@ export function LessonDetailScreen() {
   const nav = useNavigate();
   const { learner, reward, favorite } = useStore();
   const [lessons, setLessons] = useState<Lesson[] | null>(null);
+  const [official, setOfficial] = useState<PslDictEntry | null>(null);
   const item = itemById.get(id);
 
   useEffect(() => {
     let dead = false;
     loadLessons().then((ls) => { if (!dead) setLessons(ls); }).catch(() => setLessons([]));
+    // The official dictionary entry (FESF / psl.org.pk), if this lesson was
+    // matched at harvest time — streamed, never re-hosted.
+    entryForLesson(id).then((e) => { if (!dead) setOfficial(e); });
     return () => { dead = true; };
-  }, []);
+  }, [id]);
 
   if (!item) {
     return (
@@ -35,6 +41,7 @@ export function LessonDetailScreen() {
   const isEnglish = id.startsWith('letter_en_');
   const mode = isEnglish ? 'english' : 'psl';
   const needsTeacher = !view.isStatic && view.category === 'Letters';
+  const isUrduLetter = item.id.startsWith('letter_') && !item.id.startsWith('letter_en_');
   const mastered = learner.mastered.has(id);
   const fav = learner.favorites.has(id);
 
@@ -51,6 +58,11 @@ export function LessonDetailScreen() {
           <SignMediaView lesson={view} />
           <div className="lesson-title-row">
             <div className="lesson-title urdu" style={{ color: cssColor(item.colorHex) }}>{item.title}</div>
+            <button
+              className="speaker-btn"
+              onClick={() => speak(view.word || item.associatedWord || item.title || item.subtitle)}
+              aria-label="Say it aloud"
+            >🔊</button>
             <button
               className={`fav-btn ${fav ? 'on' : ''}`}
               onClick={() => { buzz([0, 80]); favorite(id); }}
@@ -96,6 +108,35 @@ export function LessonDetailScreen() {
           {mastered && <div className="mastered-chip">✓ Mastered on camera — brilliant!</div>}
         </div>
       </div>
+      {official && (
+        <div className="lesson-card official-card">
+          <h3>Official PSL sign from the FESF dictionary 🌐</h3>
+          {official.video ? (
+            <video
+              src={official.video}
+              poster={official.poster ?? official.image}
+              controls
+              preload="none"
+              playsInline
+            />
+          ) : (
+            <p className="empty-note">The full video plays on the official page.</p>
+          )}
+          <p className="official-note">
+            {isUrduLetter && (
+              <>FESF’s official sign for “{official.term}” — the memory word of
+              letter <span className="urdu">{item.title}</span> — streamed from{' '} </>
+            )}
+            {!isUrduLetter && (
+              <>FESF’s official sign for “{official.term}” — streamed from{' '}</>
+            )}
+            <a href={dictPageUrl(official.path)} target="_blank" rel="noreferrer noopener">psl.org.pk ↗</a>
+            . It never decides your grade: {needsTeacher
+              ? 'this sign still needs guided practice with your teacher.'
+              : 'your camera keeps its own judgement.'}
+          </p>
+        </div>
+      )}
       <span hidden lang="ur">{'کار'}</span>
     </div>
   );

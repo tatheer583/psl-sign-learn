@@ -5,7 +5,7 @@ import { SignMediaView } from '../components/SignMediaView';
 import { PageHeader } from '../components/Pieces';
 import { loadLessons, type Lesson } from '../lib/lessons';
 import {
-  speak, speechRecognitionAvailable, startListening, ttsAvailable, setTtsEnabled,
+  speak, speechRecognitionAvailable, startListening, ttsAvailable, ttsEnabled, setTtsEnabled,
 } from '../lib/tts';
 import { useStore } from '../store/store';
 
@@ -19,7 +19,9 @@ export function SpeechToSignScreen() {
   const [lessons, setLessons] = useState<Lesson[] | null>(null);
   const [word, setWord] = useState('');
   const [listening, setListening] = useState(false);
-  const [voiceOn, setVoiceOn] = useState(true);
+  // Mirror the persisted voice preference — a page reload must not desync
+  // from the checkbox (that display-only state made voice "mysteriously" die).
+  const [voiceOn, setVoiceOn] = useState(() => ttsAvailable() && ttsEnabled());
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {

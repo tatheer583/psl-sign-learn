@@ -30,6 +30,7 @@ export function HomeScreen() {
     { to: '/alphabet-words', title: 'Alphabet & Words', sub: 'Letters with their words', emoji: '📖', color: T },
     { to: '/converter', title: 'Gesture Converter', sub: 'Type or sign — see fingerspelling', emoji: '✋', color: K },
     { to: '/speech', title: 'Speech to Sign', sub: 'Speak a word, watch it sign', emoji: '🗣️', color: C },
+    { to: '/dictionary', title: 'Official Dictionary', sub: '6,000+ real PSL signs', emoji: '🌐', color: T },
     { to: '/stickers', title: 'Stickers & Badges', sub: `Collect with ${learner.stars} stars`, emoji: '🏆', color: Y },
   ];
 
