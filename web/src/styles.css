@@ -451,3 +451,12 @@ button { font-family: inherit; }
 .official-card video { width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; background: #000; }
 .official-note { color: var(--muted); font-size: .78rem; margin: 0; }
 .official-note a { color: var(--primary); font-weight: 700; text-decoration: none; }
+
+/* ---------- dictionary quick chips ---------- */
+.dict-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.dict-chip {
+  border: 2px solid #DCE1F0; background: var(--surface); color: var(--on-surface);
+  font-weight: 700; font-size: .82rem; border-radius: 999px; padding: 8px 14px; cursor: pointer;
+}
+.dict-chip.active { border-color: var(--cyan); background: #EAF8FB; color: #05667D; }
+.dict-chip:active { transform: scale(0.96); }

@@ -175,22 +175,55 @@ for (const [p, card] of wordsByPath) {
   (byNormTerm.get(key) ?? byNormTerm.set(key, []).get(key)).push(p);
 }
 
-// Targets: every Urdu (PSL) letter lesson (glyph + English memory word) and
-// every everyday-vocabulary lesson (display title). English ASL letters are
-// intentionally excluded — FESF videos are Pakistan (PSL) references, so
-// linking them onto ASL fingerspelling lessons would confuse learners.
+// Targets: alphabet lessons map DIRECTLY to FESF's own alphabet entries
+// (this is where "the alphabets are not working" came from — v1 only matched
+// English memory words, so e.g. letter ا's card had no official video).
+const LETTER_SLUGS = {                 // app letter id → FESF alphabet slug
+  letter_alif: 'alif', letter_be: 'bay', letter_pe: 'pay', letter_te: 'tay',
+  letter_tte: 'ttay', letter_se: 'say', letter_jim: 'jeem', letter_che: 'chay',
+  letter_he: 'hay', letter_khe: 'khay', letter_dal: 'daal', letter_dhal: 'ddaal',
+  letter_zal: 'zaal', letter_re: 'ray', letter_rre: 'rray', letter_ze: 'zay',
+  letter_zhe: 'zzay', letter_seen: 'seen', letter_sheen: 'sheen',
+  letter_swad: 'suad', letter_zwad: 'zuad', letter_toay: 'toay', letter_zoay: 'zoay',
+  letter_ain: 'aain', letter_ghain: 'ghain', letter_fay: 'fay', letter_qaf: 'qaaf',
+  letter_kaf: 'kaaf', letter_gaf: 'gaaf', letter_laam: 'laam', letter_meem: 'meem',
+  letter_noon: 'noon', letter_vao: 'wow', letter_hay: 'choti-hay',
+  letter_chhoti_yeh: 'choti-yay', letter_bari_yeh: 'bari-yay', letter_hamza: 'hamza',
+};
+const NUMBER_WORDS = {                 // single digits + irregular teens
+  0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five',
+  6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 11: 'eleven', 12: 'twelve',
+  13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen',
+  17: 'seventeen', 18: 'eighteen', 19: 'nineteen',
+};
+
 const targets = [];
+// Urdu letters: resolve by FESF alphabet slug; keep the English memory word
+// as a catalog-only reference (its video is shown in search, not on the letter).
 for (const [id, label] of Object.entries(content.wordLabels)) {
   if (!id.startsWith('letter_') || id.startsWith('letter_en_')) continue;
   const paren = label.match(/\(([^)]+)\)/)?.[1];
-  targets.push({ lessonId: id, glyph: null, candidates: paren ? [paren] : [label] });
+  const glyphMatch = content.alphabetItems.find((i) => i.id === id)?.title ?? null;
+  targets.push({ lessonId: id, glyph: glyphMatch, letterSlug: LETTER_SLUGS[id] ?? null, candidates: paren ? [paren] : [label] });
 }
-for (const it of content.alphabetItems) {
-  const t = targets.find((x) => x.lessonId === it.id);
-  if (t) t.glyph = it.title;                       // the Urdu glyph itself
+// English letter lessons → FESF's English alphabet entry (26 direct slugs).
+for (const it of content.englishAlphabetItems) {
+  const letter = it.id.replace('letter_en_', '');
+  targets.push({ lessonId: it.id, glyph: null, letterSlug: letter, candidates: [] });
 }
+// Number lessons → dictionary digit/word entries within 0–50.
+for (const it of content.numberItems) {
+  const n = parseInt(it.title, 10);
+  if (!Number.isNaN(n) && n <= 50) {
+    targets.push({
+      lessonId: it.id, glyph: null, letterSlug: null, candidates: [],
+      numberSlug: Number.isInteger(n) ? (NUMBER_WORDS[n] ?? String(n)) : null,
+    });
+  }
+}
+// Everyday-vocabulary lessons: match the display title ("Thank You", "Book"…).
 for (const it of content.vocabularyItems) {
-  targets.push({ lessonId: it.id, glyph: null, candidates: [it.title] });
+  targets.push({ lessonId: it.id, glyph: null, letterSlug: null, candidates: [it.title] });
 }
 
 // Different phrasing the dictionary may use for the same everyday word.
@@ -211,7 +244,21 @@ const SPLIT =                       // memory word → dictionary synonym
   { Rain: 'Rainfall', Hail: 'Hailstone', Sweet: 'Dessert', Fruit: 'Fruits', Kite: 'Kites' };
 
 function candidatePaths(target) {
-  // 1) exact Urdu glyph (the official alphabet entry — best possible match)
+  // 1) direct FESF alphabet / number slug (the most precise possible match)
+  if (target.letterSlug) {
+    const cat = target.lessonId.startsWith('letter_en_') ? '101-english-alphabet' : '8-alphabet-urdu';
+    const slugRe = new RegExp(`^\\/dictionary\\/${cat}\\/\\d+-${target.letterSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`);
+    for (const p of wordsByPath.keys()) {
+      if (slugRe.test(p)) return [p];
+    }
+  }
+  if (target.numberSlug) {
+    const numRe = new RegExp(`^\\/dictionary\\/58-numbers\\/\\d+-${target.numberSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`);
+    for (const p of wordsByPath.keys()) {
+      if (numRe.test(p)) return [p];
+    }
+  }
+  // 2) exact Urdu glyph (the official alphabet entry — best possible match)
   if (target.glyph) {
     for (const [p, card] of wordsByPath) {
       if (card.urdu && card.urdu.normalize('NFC') === target.glyph.normalize('NFC')) {
@@ -219,7 +266,7 @@ function candidatePaths(target) {
       }
     }
   }
-  // 2) by term candidates
+  // 3) by term candidates (memory words / vocabulary titles)
   for (const cand of target.candidates) {
     const keys = [norm(cand), norm(SPLIT[cand] ?? '')].filter(Boolean);
     for (const k of keys) {
@@ -244,6 +291,22 @@ for (const t of targets) {
   if (!paths) { unmatched.push(t); continue; }
   paths = paths.slice().sort((a, b) => catNum(a) - catNum(b));
   lessonRefs.set(t.lessonId, paths[0]);
+  // Letters keep an EXTRA reference: the memory-word entry (catalog highlight
+  // in search), while the lesson itself embeds the official letter video.
+  if (t.glyph && t.candidates.length) {
+    for (const cand of t.candidates) {
+      const k = norm(cand);
+      for (const key of [k, k + 's']) {
+        const hit = byNormTerm.get(key);
+        if (hit?.length) {
+          for (const p of hit) {
+            const card = wordsByPath.get(p);
+            if (card && !card.lessonRefs.includes(t.lessonId)) card.lessonRefs.push(t.lessonId);
+          }
+        }
+      }
+    }
+  }
   for (const p of paths) {
     const card = wordsByPath.get(p);
     if (card && !card.lessonRefs.includes(t.lessonId)) card.lessonRefs.push(t.lessonId);
@@ -251,7 +314,17 @@ for (const t of targets) {
 }
 if (unmatched.length) {
   console.log('No dictionary match for:');
-  for (const t of unmatched) console.log(`  ${t.lessonId} (${t.glyph ?? t.candidates.join(', ')})`);
+  for (const t of unmatched) console.log(`  ${t.lessonId} (${t.letterSlug ?? t.numberSlug ?? t.glyph ?? t.candidates.join(', ')})`);
+}
+
+// The matched alphabet card may not carry an Urdu label server-side; inject
+// the letter's own glyph so Urdu search works for every letter lesson.
+for (const t of targets) {
+  if (!t.glyph) continue;
+  const card = wordsByPath.get(lessonRefs.get(t.lessonId));
+  if (card && card.categorySlug.startsWith('8-alphabet-urdu')) {
+    card.urdu ??= t.glyph;
+  }
 }
 
 /* ---------- official video for every referenced word page ---------- */

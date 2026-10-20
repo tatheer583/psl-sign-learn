@@ -41,7 +41,6 @@ export function LessonDetailScreen() {
   const isEnglish = id.startsWith('letter_en_');
   const mode = isEnglish ? 'english' : 'psl';
   const needsTeacher = !view.isStatic && view.category === 'Letters';
-  const isUrduLetter = item.id.startsWith('letter_') && !item.id.startsWith('letter_en_');
   const mastered = learner.mastered.has(id);
   const fav = learner.favorites.has(id);
 
@@ -87,14 +86,14 @@ export function LessonDetailScreen() {
 
           <div className="lesson-actions">
             <button
-              className="btn secondary"
+              className="btn secondary big"
               onClick={() => { reward(id, 'learn'); buzz(); }}
               disabled={hasLearnedToday(learner.rewards, id)}
             >
               {hasLearnedToday(learner.rewards, id) ? 'Learned today ✓' : 'I learned this! (+2 ⭐)'}
             </button>
             {view.isStatic ? (
-              <button className="btn primary" onClick={() => nav(`/practice?target=${view.classifierLabel}&mode=${mode}&display=${encodeURIComponent(item.title)}`)}>
+              <button className="btn primary big" onClick={() => nav(`/practice?target=${view.classifierLabel}&mode=${mode}&display=${encodeURIComponent(item.title)}`)}>
                 📸 Practice on camera
               </button>
             ) : (
@@ -123,16 +122,21 @@ export function LessonDetailScreen() {
             <p className="empty-note">The full video plays on the official page.</p>
           )}
           <p className="official-note">
-            {isUrduLetter && (
-              <>FESF’s official sign for “{official.term}” — the memory word of
-              letter <span className="urdu">{item.title}</span> — streamed from{' '} </>
+            {official.category === 'Alphabet Urdu' && (
+              <>The official FESF sign of letter <span className="urdu">{official.urdu}</span> ({official.term}) — streamed from{' '}</>
             )}
-            {!isUrduLetter && (
+            {official.category === 'English Alphabet' && (
+              <>FESF’s official English fingerspelling for letter {official.term} — streamed from{' '}</>
+            )}
+            {official.category === 'Numbers' && (
+              <>The FESF official sign for {official.term} — streamed from{' '}</>
+            )}
+            {!['Alphabet Urdu', 'English Alphabet', 'Numbers'].includes(official.category) && (
               <>FESF’s official sign for “{official.term}” — streamed from{' '}</>
             )}
             <a href={dictPageUrl(official.path)} target="_blank" rel="noreferrer noopener">psl.org.pk ↗</a>
             . It never decides your grade: {needsTeacher
-              ? 'this sign still needs guided practice with your teacher.'
+              ? 'practise together with your teacher or family.'
               : 'your camera keeps its own judgement.'}
           </p>
         </div>

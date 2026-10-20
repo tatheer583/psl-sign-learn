@@ -50,9 +50,20 @@ export function DictionaryScreen() {
       />
 
       <p className="dict-note">
-        Made by <b>FESF</b> / the Deaf Reach program. Videos stream live from the
-        official dictionary — Irssa bundles none of them and links every card back.
+        Real PSL videos made by <b>FESF</b> (Deaf Reach) — streamed from psl.org.pk with thanks.
       </p>
+
+      <div className="dict-chips" role="group" aria-label="Quick categories">
+        {['Alphabet Urdu', 'English Alphabet', 'Numbers', 'Mammals', 'Fruits', 'Classroom', 'Weather', 'Clothes Accessories'].map((c) => (
+          <button
+            key={c}
+            className={`dict-chip ${q === c ? 'active' : ''}`}
+            onClick={() => { setQ(q === c ? '' : c); setLimit(PAGE_SIZE); }}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
 
       <input
         className="text-input big"

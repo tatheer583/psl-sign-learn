@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T12:08:31.226Z",
+ "generated": "2026-10-20T12:40:03.929Z",
  "source": "https://psl.org.pk/dictionary",
  "provider": "Family Educational Services Foundation (FESF), Deaf Reach — psl.org.pk",
  "license": "All dictionary content © FESF. Irssa bundles none of it: the index holds metadata only; videos and images stream from the official site and every entry links back to psl.org.pk.",
@@ -319,37 +319,91 @@
   }
  ],
  "lessons": {
-  "letter_alif": "/dictionary/38-fruits/2041-pomegranate",
-  "letter_be": "/dictionary/51-mammals/2869-goat",
-  "letter_pe": "/dictionary/69-sports-games/7534-kite",
-  "letter_te": "/dictionary/45-insects-spiders-reptiles/2589-butterfly",
-  "letter_tte": "/dictionary/26-clothes-accessories/1360-cap",
-  "letter_se": "/dictionary/38-fruits/2025-fruit",
-  "letter_jim": "/dictionary/3-airport/162-airplane",
-  "letter_che": "/dictionary/67-space/4458-moon",
-  "letter_he": "/dictionary/43-holidays-celebrations/2561-sweets",
-  "letter_khe": "/dictionary/38-fruits/2034-melon",
-  "letter_dal": "/dictionary/10-around-the-house/412-door",
-  "letter_re": "/dictionary/36-food-general/1923-bread",
-  "letter_rre": "/dictionary/73-weather/5376-rain",
-  "letter_ze": "/dictionary/51-mammals/2911-zebra",
-  "letter_zhe": "/dictionary/73-weather/5352-hail",
-  "letter_seen": "/dictionary/38-fruits/2016-apple",
-  "letter_sheen": "/dictionary/51-mammals/2882-lion",
-  "letter_swad": "/dictionary/13-bathroom/567-soap",
-  "letter_zwad": "/dictionary/53-mathematics/2987-multiply",
-  "letter_toay": "/dictionary/17-birds/759-parrot",
-  "letter_zoay": "/dictionary/47-kitchen/2718-pot",
-  "letter_ain": "/dictionary/26-clothes-accessories/1373-glasses",
-  "letter_ghain": "/dictionary/43-holidays-celebrations/2503-balloon",
-  "letter_fay": "/dictionary/69-sports-games/4550-football",
-  "letter_qaf": "/dictionary/24-classroom/1306-pen",
-  "letter_kaf": "/dictionary/24-classroom/1273-book",
-  "letter_gaf": "/dictionary/70-transport/8057-car",
-  "letter_laam": "/dictionary/43-holidays-celebrations/2561-sweets",
-  "letter_meem": "/dictionary/52-marine-life/2918-fish",
-  "letter_hay": "/dictionary/18-body-anatomy/803-hand",
-  "letter_chhoti_yeh": "/dictionary/46-jewelry/2652-ruby",
+  "letter_alif": "/dictionary/8-alphabet-urdu/363-alif",
+  "letter_be": "/dictionary/8-alphabet-urdu/364-bay",
+  "letter_pe": "/dictionary/8-alphabet-urdu/365-pay",
+  "letter_te": "/dictionary/8-alphabet-urdu/366-tay",
+  "letter_tte": "/dictionary/8-alphabet-urdu/367-ttay",
+  "letter_se": "/dictionary/8-alphabet-urdu/368-say",
+  "letter_jim": "/dictionary/8-alphabet-urdu/369-jeem",
+  "letter_che": "/dictionary/8-alphabet-urdu/370-chay",
+  "letter_he": "/dictionary/8-alphabet-urdu/371-hay",
+  "letter_khe": "/dictionary/8-alphabet-urdu/372-khay",
+  "letter_dal": "/dictionary/8-alphabet-urdu/373-daal",
+  "letter_dhal": "/dictionary/8-alphabet-urdu/374-ddaal",
+  "letter_zal": "/dictionary/8-alphabet-urdu/375-zaal",
+  "letter_re": "/dictionary/8-alphabet-urdu/376-ray",
+  "letter_rre": "/dictionary/8-alphabet-urdu/377-rray",
+  "letter_ze": "/dictionary/8-alphabet-urdu/378-zay",
+  "letter_zhe": "/dictionary/8-alphabet-urdu/379-zzay",
+  "letter_seen": "/dictionary/8-alphabet-urdu/380-seen",
+  "letter_sheen": "/dictionary/8-alphabet-urdu/381-sheen",
+  "letter_swad": "/dictionary/8-alphabet-urdu/382-suad",
+  "letter_zwad": "/dictionary/8-alphabet-urdu/383-zuad",
+  "letter_toay": "/dictionary/8-alphabet-urdu/384-toay",
+  "letter_zoay": "/dictionary/8-alphabet-urdu/385-zoay",
+  "letter_ain": "/dictionary/8-alphabet-urdu/386-aain",
+  "letter_ghain": "/dictionary/8-alphabet-urdu/387-ghain",
+  "letter_fay": "/dictionary/8-alphabet-urdu/388-fay",
+  "letter_qaf": "/dictionary/8-alphabet-urdu/389-qaaf",
+  "letter_kaf": "/dictionary/8-alphabet-urdu/390-kaaf",
+  "letter_gaf": "/dictionary/8-alphabet-urdu/391-gaaf",
+  "letter_laam": "/dictionary/8-alphabet-urdu/392-laam",
+  "letter_meem": "/dictionary/8-alphabet-urdu/393-meem",
+  "letter_noon": "/dictionary/8-alphabet-urdu/394-noon",
+  "letter_vao": "/dictionary/8-alphabet-urdu/396-wow",
+  "letter_hay": "/dictionary/8-alphabet-urdu/397-choti-hay",
+  "letter_chhoti_yeh": "/dictionary/8-alphabet-urdu/400-choti-yay",
+  "letter_bari_yeh": "/dictionary/8-alphabet-urdu/401-bari-yay",
+  "letter_hamza": "/dictionary/8-alphabet-urdu/399-hamza",
+  "letter_en_a": "/dictionary/101-english-alphabet/134-a",
+  "letter_en_b": "/dictionary/101-english-alphabet/135-b",
+  "letter_en_c": "/dictionary/101-english-alphabet/136-c",
+  "letter_en_d": "/dictionary/101-english-alphabet/137-d",
+  "letter_en_e": "/dictionary/101-english-alphabet/138-e",
+  "letter_en_f": "/dictionary/101-english-alphabet/139-f",
+  "letter_en_g": "/dictionary/101-english-alphabet/140-g",
+  "letter_en_h": "/dictionary/101-english-alphabet/141-h",
+  "letter_en_i": "/dictionary/101-english-alphabet/142-i",
+  "letter_en_j": "/dictionary/101-english-alphabet/144-j",
+  "letter_en_k": "/dictionary/101-english-alphabet/145-k",
+  "letter_en_l": "/dictionary/101-english-alphabet/146-l",
+  "letter_en_m": "/dictionary/101-english-alphabet/147-m",
+  "letter_en_n": "/dictionary/101-english-alphabet/148-n",
+  "letter_en_o": "/dictionary/101-english-alphabet/149-o",
+  "letter_en_p": "/dictionary/101-english-alphabet/150-p",
+  "letter_en_q": "/dictionary/101-english-alphabet/151-q",
+  "letter_en_r": "/dictionary/101-english-alphabet/152-r",
+  "letter_en_s": "/dictionary/101-english-alphabet/153-s",
+  "letter_en_t": "/dictionary/101-english-alphabet/154-t",
+  "letter_en_u": "/dictionary/101-english-alphabet/155-u",
+  "letter_en_v": "/dictionary/101-english-alphabet/156-v",
+  "letter_en_w": "/dictionary/101-english-alphabet/157-w",
+  "letter_en_x": "/dictionary/101-english-alphabet/158-x",
+  "letter_en_y": "/dictionary/101-english-alphabet/159-y",
+  "letter_en_z": "/dictionary/101-english-alphabet/160-z",
+  "num_0": "/dictionary/58-numbers/8109-zero",
+  "num_1": "/dictionary/58-numbers/6006-one",
+  "num_2": "/dictionary/58-numbers/7775-two",
+  "num_3": "/dictionary/58-numbers/7761-three",
+  "num_5": "/dictionary/58-numbers/7426-five",
+  "num_7": "/dictionary/58-numbers/7708-seven",
+  "num_8": "/dictionary/58-numbers/7378-eight",
+  "num_9": "/dictionary/58-numbers/7598-nine",
+  "num_10": "/dictionary/58-numbers/3702-10",
+  "num_11": "/dictionary/58-numbers/7385-eleven",
+  "num_12": "/dictionary/58-numbers/7773-twelve",
+  "num_13": "/dictionary/58-numbers/7760-thirteen",
+  "num_14": "/dictionary/58-numbers/7436-fourteen",
+  "num_15": "/dictionary/58-numbers/7418-fifteen",
+  "num_16": "/dictionary/58-numbers/7727-sixteen",
+  "num_17": "/dictionary/58-numbers/7709-seventeen",
+  "num_18": "/dictionary/58-numbers/7379-eighteen",
+  "num_19": "/dictionary/58-numbers/7599-nineteen",
+  "num_20": "/dictionary/58-numbers/3703-20",
+  "num_30": "/dictionary/58-numbers/3704-30",
+  "num_40": "/dictionary/58-numbers/3705-40",
+  "num_50": "/dictionary/58-numbers/3706-50",
   "vocab_hello": "/dictionary/65-sentences/4309-hello",
   "vocab_thanks": "/dictionary/65-sentences/4369-thank-you",
   "vocab_water": "/dictionary/31-drinks/7070-water",
@@ -2840,9 +2894,7 @@
    "path": "/dictionary/3-airport/162-airplane",
    "lessonRefs": [
     "letter_jim"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/a/720p/airplane_1598515422_72209.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/NL6hE5PUk3RGH6tErwhw1598515712314.png"
+   ]
   },
   {
    "term": "Arrival",
@@ -3066,163 +3118,353 @@
   },
   {
    "term": "Alif",
+   "urdu": "ا",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/363-alif"
+   "path": "/dictionary/8-alphabet-urdu/363-alif",
+   "lessonRefs": [
+    "letter_alif"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/01_1609159738_92939.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/01_1609159738_20882.jpg"
   },
   {
    "term": "Bay",
+   "urdu": "ب",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/364-bay"
+   "path": "/dictionary/8-alphabet-urdu/364-bay",
+   "lessonRefs": [
+    "letter_be"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/02_1609159764_48267.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/02_1609159764_65628.jpg"
   },
   {
    "term": "Pay",
+   "urdu": "پ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/365-pay"
+   "path": "/dictionary/8-alphabet-urdu/365-pay",
+   "lessonRefs": [
+    "letter_pe"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/03_1609159785_42590.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/03_1609159785_61808.jpg"
   },
   {
    "term": "Tay",
+   "urdu": "ت",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/366-tay"
+   "path": "/dictionary/8-alphabet-urdu/366-tay",
+   "lessonRefs": [
+    "letter_te"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/04_1609159813_28755.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/04_1609159813_72487.jpg"
   },
   {
    "term": "Ttay",
+   "urdu": "ٹ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/367-ttay"
+   "path": "/dictionary/8-alphabet-urdu/367-ttay",
+   "lessonRefs": [
+    "letter_tte"
+   ]
   },
   {
    "term": "Say",
+   "urdu": "ث",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/368-say"
+   "path": "/dictionary/8-alphabet-urdu/368-say",
+   "lessonRefs": [
+    "letter_se"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/06_1609159854_63950.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/06_1609159854_59743.jpg"
   },
   {
    "term": "Jeem",
+   "urdu": "ج",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/369-jeem"
+   "path": "/dictionary/8-alphabet-urdu/369-jeem",
+   "lessonRefs": [
+    "letter_jim"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/07_1609159878_25494.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/07_1609159878_39015.jpg"
   },
   {
    "term": "Chay",
+   "urdu": "چ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/370-chay"
+   "path": "/dictionary/8-alphabet-urdu/370-chay",
+   "lessonRefs": [
+    "letter_che"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/08_1609159900_40060.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/08_1609159900_86159.jpg"
   },
   {
    "term": "Hay",
+   "urdu": "ح",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/371-hay"
+   "path": "/dictionary/8-alphabet-urdu/371-hay",
+   "lessonRefs": [
+    "letter_he"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/0/720p/09_1609159926_12816.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/09_1609159926_81877.jpg"
   },
   {
    "term": "Khay",
+   "urdu": "خ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/372-khay"
+   "path": "/dictionary/8-alphabet-urdu/372-khay",
+   "lessonRefs": [
+    "letter_khe"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/10_1609159959_62790.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/10_1609159959_35101.jpg"
   },
   {
    "term": "Daal",
+   "urdu": "د",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/373-daal"
+   "path": "/dictionary/8-alphabet-urdu/373-daal",
+   "lessonRefs": [
+    "letter_dal"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/11_1609159999_42495.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/11_1609159999_74803.jpg"
   },
   {
    "term": "Ddaal",
+   "urdu": "ڈ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/374-ddaal"
+   "path": "/dictionary/8-alphabet-urdu/374-ddaal",
+   "lessonRefs": [
+    "letter_dhal"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/12_1669803614_34604.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/12_1669803614_34604.png"
   },
   {
    "term": "Zaal",
+   "urdu": "ذ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/375-zaal"
+   "path": "/dictionary/8-alphabet-urdu/375-zaal",
+   "lessonRefs": [
+    "letter_zal"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/13_1609160059_13107.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/13_1609160059_78175.jpg"
   },
   {
    "term": "Ray",
+   "urdu": "ر",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/376-ray"
+   "path": "/dictionary/8-alphabet-urdu/376-ray",
+   "lessonRefs": [
+    "letter_re"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/14_1609160090_61642.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/14_1609160090_19270.jpg"
   },
   {
    "term": "Rray",
+   "urdu": "ڑ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/377-rray"
+   "path": "/dictionary/8-alphabet-urdu/377-rray",
+   "lessonRefs": [
+    "letter_rre"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/15_1609160127_33360.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/15_1609160127_31447.jpg"
   },
   {
    "term": "Zay",
+   "urdu": "ز",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/378-zay"
+   "path": "/dictionary/8-alphabet-urdu/378-zay",
+   "lessonRefs": [
+    "letter_ze"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/16_1609160159_69197.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/16_1609160159_89237.jpg"
   },
   {
    "term": "Zzay",
+   "urdu": "ژ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/379-zzay"
+   "path": "/dictionary/8-alphabet-urdu/379-zzay",
+   "lessonRefs": [
+    "letter_zhe"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/17_1669803704_54233.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/17_1669803704_54233.png"
   },
   {
    "term": "Seen",
+   "urdu": "س",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/380-seen"
+   "path": "/dictionary/8-alphabet-urdu/380-seen",
+   "lessonRefs": [
+    "letter_seen"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/18_1609160216_39993.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/18_1609160216_89574.jpg"
   },
   {
    "term": "Sheen",
+   "urdu": "ش",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/381-sheen"
+   "path": "/dictionary/8-alphabet-urdu/381-sheen",
+   "lessonRefs": [
+    "letter_sheen"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/19_1609160250_91182.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/19_1609160250_36690.jpg"
   },
   {
    "term": "Suad",
+   "urdu": "ص",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/382-suad"
+   "path": "/dictionary/8-alphabet-urdu/382-suad",
+   "lessonRefs": [
+    "letter_swad"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/20_1609160282_32415.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/20_1609160282_69712.jpg"
   },
   {
    "term": "Zuad",
+   "urdu": "ض",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/383-zuad"
+   "path": "/dictionary/8-alphabet-urdu/383-zuad",
+   "lessonRefs": [
+    "letter_zwad"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/21_1609160301_22324.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/21_1609160301_11863.jpg"
   },
   {
    "term": "Toay",
+   "urdu": "ط",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/384-toay"
+   "path": "/dictionary/8-alphabet-urdu/384-toay",
+   "lessonRefs": [
+    "letter_toay"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/22_1609160327_31628.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/22_1609160327_42098.jpg"
   },
   {
    "term": "Zoay",
+   "urdu": "ظ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/385-zoay"
+   "path": "/dictionary/8-alphabet-urdu/385-zoay",
+   "lessonRefs": [
+    "letter_zoay"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/23_1609160355_83165.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/23_1609160355_17806.jpg"
   },
   {
    "term": "Aain",
+   "urdu": "ع",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/386-aain"
+   "path": "/dictionary/8-alphabet-urdu/386-aain",
+   "lessonRefs": [
+    "letter_ain"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/24_1669803910_76058.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/24_1669803910_76058.png"
   },
   {
    "term": "Ghain",
+   "urdu": "غ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/387-ghain"
+   "path": "/dictionary/8-alphabet-urdu/387-ghain",
+   "lessonRefs": [
+    "letter_ghain"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/25_1669803963_94651.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/25_1669803963_94651.png"
   },
   {
    "term": "Fay",
+   "urdu": "ف",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/388-fay"
+   "path": "/dictionary/8-alphabet-urdu/388-fay",
+   "lessonRefs": [
+    "letter_fay"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/26_1609160440_33636.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/26_1609160440_93170.jpg"
   },
   {
    "term": "Qaaf",
+   "urdu": "ق",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/389-qaaf"
+   "path": "/dictionary/8-alphabet-urdu/389-qaaf",
+   "lessonRefs": [
+    "letter_qaf"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/27_1669804061_22536.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/27_1669804061_22536.png"
   },
   {
    "term": "Kaaf",
+   "urdu": "ک",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/390-kaaf"
+   "path": "/dictionary/8-alphabet-urdu/390-kaaf",
+   "lessonRefs": [
+    "letter_kaf"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/28_1609160547_73857.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/28_1609160547_26478.jpg"
   },
   {
    "term": "Gaaf",
+   "urdu": "گ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/391-gaaf"
+   "path": "/dictionary/8-alphabet-urdu/391-gaaf",
+   "lessonRefs": [
+    "letter_gaf"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/29_1609160619_47690.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/29_1609160619_24325.jpg"
   },
   {
    "term": "Laam",
+   "urdu": "ل",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/392-laam"
+   "path": "/dictionary/8-alphabet-urdu/392-laam",
+   "lessonRefs": [
+    "letter_laam"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/30_1609160651_45925.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/30_1609160651_83349.jpg"
   },
   {
    "term": "Meem",
+   "urdu": "م",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/393-meem"
+   "path": "/dictionary/8-alphabet-urdu/393-meem",
+   "lessonRefs": [
+    "letter_meem"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/31_1609160678_78644.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/31_1609160678_30586.jpg"
   },
   {
    "term": "Noon",
+   "urdu": "ن",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/394-noon"
+   "path": "/dictionary/8-alphabet-urdu/394-noon",
+   "lessonRefs": [
+    "letter_noon"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/32_1609160698_44521.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/32_1609160698_21962.jpg"
   },
   {
    "term": "Noon Ghunna",
@@ -3231,13 +3473,25 @@
   },
   {
    "term": "Wow",
+   "urdu": "و",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/396-wow"
+   "path": "/dictionary/8-alphabet-urdu/396-wow",
+   "lessonRefs": [
+    "letter_vao"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/34_1609160810_60331.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/34_1609160810_19158.jpg"
   },
   {
    "term": "Choti Hay",
+   "urdu": "ہ",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/397-choti-hay"
+   "path": "/dictionary/8-alphabet-urdu/397-choti-hay",
+   "lessonRefs": [
+    "letter_hay"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/35_1669804450_85931.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/35_1669804450_85931.png"
   },
   {
    "term": "DO Chashmi Hay",
@@ -3246,18 +3500,36 @@
   },
   {
    "term": "Hamza",
+   "urdu": "ء",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/399-hamza"
+   "path": "/dictionary/8-alphabet-urdu/399-hamza",
+   "lessonRefs": [
+    "letter_hamza"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/37_1609160940_66937.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/37_1609160940_47377.jpg"
   },
   {
    "term": "Choti Yay",
+   "urdu": "ی",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/400-choti-yay"
+   "path": "/dictionary/8-alphabet-urdu/400-choti-yay",
+   "lessonRefs": [
+    "letter_chhoti_yeh"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/38_1669804572_72109.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/38_1669804572_72109.png"
   },
   {
    "term": "Bari Yay",
+   "urdu": "ے",
    "category": "Alphabet Urdu",
-   "path": "/dictionary/8-alphabet-urdu/401-bari-yay"
+   "path": "/dictionary/8-alphabet-urdu/401-bari-yay",
+   "lessonRefs": [
+    "letter_bari_yeh"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/39_1609160993_75516.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/39_1609160993_67951.jpg"
   },
   {
    "term": "Air Conditioner",
@@ -3465,9 +3737,7 @@
    "path": "/dictionary/10-around-the-house/412-door",
    "lessonRefs": [
     "letter_dal"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/d/720p/door_1616936686_69041.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/door_1616936686_28365.jpg"
+   ]
   },
   {
    "term": "Electric Poles",
@@ -4440,9 +4710,7 @@
    "path": "/dictionary/13-bathroom/567-soap",
    "lessonRefs": [
     "letter_swad"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/soap_1619339948_89949.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/soap_1619339948_23215.jpg"
+   ]
   },
   {
    "term": "Tap",
@@ -5420,14 +5688,12 @@
    "path": "/dictionary/17-birds/758-owl"
   },
   {
-   "term": "parrot",
+   "term": "Parrot",
    "category": "Birds",
    "path": "/dictionary/17-birds/759-parrot",
    "lessonRefs": [
     "letter_toay"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/p/720p/parrot_1619610590_60326.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/parrot_1619610590_42043.jpg"
+   ]
   },
   {
    "term": "Partridge",
@@ -5660,9 +5926,7 @@
    "path": "/dictionary/18-body-anatomy/803-hand",
    "lessonRefs": [
     "letter_hay"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/h/720p/hand_1619612856_83277.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/hand_1619612856_30645.jpg"
+   ]
   },
   {
    "term": "Head",
@@ -8066,14 +8330,12 @@
    "path": "/dictionary/24-classroom/1304-page"
   },
   {
-   "term": "pen",
+   "term": "Pen",
    "category": "Classroom",
    "path": "/dictionary/24-classroom/1306-pen",
    "lessonRefs": [
     "letter_qaf"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/p/720p/pen_1619975945_23482.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/pen_1619975945_67845.jpg"
+   ]
   },
   {
    "term": "Pencil",
@@ -8381,14 +8643,12 @@
    "path": "/dictionary/26-clothes-accessories/1357-bohri-burqah"
   },
   {
-   "term": "cap",
+   "term": "Cap",
    "category": "Clothes Accessories",
    "path": "/dictionary/26-clothes-accessories/1360-cap",
    "lessonRefs": [
     "letter_tte"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/c/720p/cap_1619977881_31348.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/cap_1619977881_76976.jpg"
+   ]
   },
   {
    "term": "Chori Dar Pajama",
@@ -8451,14 +8711,12 @@
    "path": "/dictionary/26-clothes-accessories/1372-frock"
   },
   {
-   "term": "glasses",
+   "term": "Glasses",
    "category": "Clothes Accessories",
    "path": "/dictionary/26-clothes-accessories/1373-glasses",
    "lessonRefs": [
     "letter_ain"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/g/720p/glasses_1620139628_56559.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/glasses_1620139628_21631.jpg"
+   ]
   },
   {
    "term": "Guard Uniform",
@@ -9268,7 +9526,10 @@
   {
    "term": "Caps",
    "category": "Computer",
-   "path": "/dictionary/28-computer/6132-caps"
+   "path": "/dictionary/28-computer/6132-caps",
+   "lessonRefs": [
+    "letter_tte"
+   ]
   },
   {
    "term": "Color Printing",
@@ -11931,14 +12192,12 @@
    "path": "/dictionary/36-food-general/1922-beef"
   },
   {
-   "term": "bread",
+   "term": "Bread",
    "category": "Food General",
    "path": "/dictionary/36-food-general/1923-bread",
    "lessonRefs": [
     "letter_re"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/b/720p/bread_1621157749_45196.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/bread_1621157749_63740.jpg"
+   ]
   },
   {
    "term": "Breakfast",
@@ -12456,14 +12715,12 @@
    "path": "/dictionary/37-food-dishes/7694-sarsoo-ka-saag"
   },
   {
-   "term": "apple",
+   "term": "Apple",
    "category": "Fruits",
    "path": "/dictionary/38-fruits/2016-apple",
    "lessonRefs": [
     "letter_seen"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/a/720p/apple_1621169882_32364.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/apple_1621169882_97189.jpg"
+   ]
   },
   {
    "term": "Apricot",
@@ -12491,14 +12748,12 @@
    "path": "/dictionary/38-fruits/2024-fig"
   },
   {
-   "term": "fruit",
+   "term": "Fruit",
    "category": "Fruits",
    "path": "/dictionary/38-fruits/2025-fruit",
    "lessonRefs": [
     "letter_se"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/fruit_1621170223_62877.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/fruit_1621170223_96780.jpg"
+   ]
   },
   {
    "term": "Grape",
@@ -12541,14 +12796,12 @@
    "path": "/dictionary/38-fruits/2033-mango"
   },
   {
-   "term": "melon",
+   "term": "Melon",
    "category": "Fruits",
    "path": "/dictionary/38-fruits/2034-melon",
    "lessonRefs": [
     "letter_khe"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/m/720p/melon_1621170431_52865.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/melon_1621170431_93962.jpg"
+   ]
   },
   {
    "term": "Orange Fruit",
@@ -12581,14 +12834,12 @@
    "path": "/dictionary/38-fruits/2040-plum"
   },
   {
-   "term": "pomegranate",
+   "term": "Pomegranate",
    "category": "Fruits",
    "path": "/dictionary/38-fruits/2041-pomegranate",
    "lessonRefs": [
     "letter_alif"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/p/720p/pomegranate_1621170952_61736.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/pomegranate_1621170952_43842.jpg"
+   ]
   },
   {
    "term": "Raisin",
@@ -12623,7 +12874,10 @@
   {
    "term": "Fruits",
    "category": "Fruits",
-   "path": "/dictionary/38-fruits/7438-fruits"
+   "path": "/dictionary/38-fruits/7438-fruits",
+   "lessonRefs": [
+    "letter_se"
+   ]
   },
   {
    "term": "Sapota",
@@ -15106,14 +15360,12 @@
    "path": "/dictionary/43-holidays-celebrations/2502-ashura"
   },
   {
-   "term": "balloon",
+   "term": "Balloon",
    "category": "Holidays Celebrations",
    "path": "/dictionary/43-holidays-celebrations/2503-balloon",
    "lessonRefs": [
     "letter_ghain"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/b/720p/balloon_1619864491_18085.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/balloon_1619864491_80708.jpg"
+   ]
   },
   {
    "term": "Banner",
@@ -15356,15 +15608,13 @@
    "path": "/dictionary/43-holidays-celebrations/2560-sparkler"
   },
   {
-   "term": "sweets",
+   "term": "Sweets",
    "category": "Holidays Celebrations",
    "path": "/dictionary/43-holidays-celebrations/2561-sweets",
    "lessonRefs": [
     "letter_he",
     "letter_laam"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/sweets_1621432113_38081.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/sweets_1621432113_24783.jpg"
+   ]
   },
   {
    "term": "Throw A Party",
@@ -15517,14 +15767,12 @@
    "path": "/dictionary/45-insects-spiders-reptiles/2588-beetle"
   },
   {
-   "term": "butterfly",
+   "term": "Butterfly",
    "category": "Insects Spiders Reptiles",
    "path": "/dictionary/45-insects-spiders-reptiles/2589-butterfly",
    "lessonRefs": [
     "letter_te"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/b/720p/butterfly_1621435346_94902.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/butterfly_1621435346_98353.jpg"
+   ]
   },
   {
    "term": "Cobra",
@@ -15812,14 +16060,12 @@
    "path": "/dictionary/46-jewelry/2651-ring"
   },
   {
-   "term": "ruby",
+   "term": "Ruby",
    "category": "Jewelry",
    "path": "/dictionary/46-jewelry/2652-ruby",
    "lessonRefs": [
     "letter_chhoti_yeh"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/r/720p/ruby_1621584917_56512.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/ruby_1621584917_47015.jpg"
+   ]
   },
   {
    "term": "Sapphire",
@@ -16082,14 +16328,12 @@
    "path": "/dictionary/47-kitchen/2715-peeler"
   },
   {
-   "term": "pot",
+   "term": "Pot",
    "category": "Kitchen",
    "path": "/dictionary/47-kitchen/2718-pot",
    "lessonRefs": [
     "letter_zoay"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/p/720p/pot_1621586486_59248.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/pot_1621586486_30898.jpg"
+   ]
   },
   {
    "term": "Pressure Cooker",
@@ -16807,14 +17051,12 @@
    "path": "/dictionary/51-mammals/2868-giraffe"
   },
   {
-   "term": "goat",
+   "term": "Goat",
    "category": "Mammals",
    "path": "/dictionary/51-mammals/2869-goat",
    "lessonRefs": [
     "letter_be"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/g/720p/goat_1621883691_12014.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/goat_1621883691_19988.jpg"
+   ]
   },
   {
    "term": "Herd",
@@ -16872,14 +17114,12 @@
    "path": "/dictionary/51-mammals/2881-leopard"
   },
   {
-   "term": "lion",
+   "term": "Lion",
    "category": "Mammals",
    "path": "/dictionary/51-mammals/2882-lion",
    "lessonRefs": [
     "letter_sheen"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/l/720p/lion_1621883944_71769.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/lion_1621883944_42670.jpg"
+   ]
   },
   {
    "term": "Llama",
@@ -16982,14 +17222,12 @@
    "path": "/dictionary/51-mammals/2910-wolf"
   },
   {
-   "term": "zebra",
+   "term": "Zebra",
    "category": "Mammals",
    "path": "/dictionary/51-mammals/2911-zebra",
    "lessonRefs": [
     "letter_ze"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/z/720p/zebra_1621884511_98377.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/zebra_1621884511_50839.jpg"
+   ]
   },
   {
    "term": "Goatling",
@@ -17027,14 +17265,12 @@
    "path": "/dictionary/52-marine-life/2917-fins"
   },
   {
-   "term": "fish",
+   "term": "Fish",
    "category": "Marine Life",
    "path": "/dictionary/52-marine-life/2918-fish",
    "lessonRefs": [
     "letter_meem"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/fish_1621884782_42706.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/fish_1621884782_66578.jpg"
+   ]
   },
   {
    "term": "Gills",
@@ -17322,14 +17558,12 @@
    "path": "/dictionary/53-mathematics/2986-multiplication-table"
   },
   {
-   "term": "multiply",
+   "term": "Multiply",
    "category": "Mathematics",
    "path": "/dictionary/53-mathematics/2987-multiply",
    "lessonRefs": [
     "letter_zwad"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/m/720p/multiply_1621946470_70079.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/multiply_1621946470_80030.jpg"
+   ]
   },
   {
    "term": "Number",
@@ -20914,27 +21148,52 @@
   {
    "term": "10",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/3702-10"
+   "path": "/dictionary/58-numbers/3702-10",
+   "lessonRefs": [
+    "num_10"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/1/720p/10_1622204350_38597.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/10_1622204350_44489.jpg"
   },
   {
    "term": "20",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/3703-20"
+   "path": "/dictionary/58-numbers/3703-20",
+   "lessonRefs": [
+    "num_20"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/2/720p/20_1622204367_48491.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/20_1622204367_50454.jpg"
   },
   {
    "term": "30",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/3704-30"
+   "path": "/dictionary/58-numbers/3704-30",
+   "lessonRefs": [
+    "num_30"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/3/720p/30_1622204381_25549.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/30_1622204381_36276.jpg"
   },
   {
    "term": "40",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/3705-40"
+   "path": "/dictionary/58-numbers/3705-40",
+   "lessonRefs": [
+    "num_40"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/4/720p/40_1622204398_32681.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/40_1622204398_88184.jpg"
   },
   {
    "term": "50",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/3706-50"
+   "path": "/dictionary/58-numbers/3706-50",
+   "lessonRefs": [
+    "num_50"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/5/720p/50_1622204422_92185.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/50_1622204422_86131.jpg"
   },
   {
    "term": "60",
@@ -21059,47 +21318,92 @@
   {
    "term": "One",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/6006-one"
+   "path": "/dictionary/58-numbers/6006-one",
+   "lessonRefs": [
+    "num_1"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/o/720p/One._1660298799_85596.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/one_1660298799_25808.jpg"
   },
   {
-   "term": "Eight",
+   "term": "eight",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7378-eight"
+   "path": "/dictionary/58-numbers/7378-eight",
+   "lessonRefs": [
+    "num_8"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/e/720p/eight_1680107033_94207.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/cAPYFjgmnRNsccOkMyAa1680107604908.png"
   },
   {
-   "term": "Eighteen",
+   "term": "eighteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7379-eighteen"
+   "path": "/dictionary/58-numbers/7379-eighteen",
+   "lessonRefs": [
+    "num_18"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/e/720p/eighteen_1680107047_96587.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/4RMKvzxnvPFMkEOiorvn1680107564905.png"
   },
   {
-   "term": "Eleven",
+   "term": "eleven",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7385-eleven"
+   "path": "/dictionary/58-numbers/7385-eleven",
+   "lessonRefs": [
+    "num_11"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/e/720p/eleven_1680107206_69371.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/eoclezSKgQyniY2oPkAg1680107554900.png"
   },
   {
-   "term": "Fifteen",
+   "term": "fifteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7418-fifteen"
+   "path": "/dictionary/58-numbers/7418-fifteen",
+   "lessonRefs": [
+    "num_15"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/fifteen_1680107986_27654.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/EyW2L7EtOOlvj6ucfMYH1680108244947.png"
   },
   {
-   "term": "Five",
+   "term": "five",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7426-five"
+   "path": "/dictionary/58-numbers/7426-five",
+   "lessonRefs": [
+    "num_5"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/five_1680108168_89159.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/JtLF6H7870MHPNfgplNk1680108759998.png"
   },
   {
-   "term": "Fourteen",
+   "term": "fourteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7436-fourteen"
+   "path": "/dictionary/58-numbers/7436-fourteen",
+   "lessonRefs": [
+    "num_14"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/fourteen_1680108441_35538.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/cHPBOSnhKvdLlRYEcKSm1680108909999.png"
   },
   {
-   "term": "Nine",
+   "term": "nine",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7598-nine"
+   "path": "/dictionary/58-numbers/7598-nine",
+   "lessonRefs": [
+    "num_9"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/n/720p/nine_1680110887_42070.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/Pk0MwVziTdnuerY0hhbR1680111300312.png"
   },
   {
-   "term": "Nineteen",
+   "term": "nineteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7599-nineteen"
+   "path": "/dictionary/58-numbers/7599-nineteen",
+   "lessonRefs": [
+    "num_19"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/n/720p/nineteen_1680110901_62587.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/RhpCdlA2vkT1DwFqHm651680111650355.png"
   },
   {
    "term": "Ninth",
@@ -21112,14 +21416,24 @@
    "path": "/dictionary/58-numbers/7614-one-quarter"
   },
   {
-   "term": "Seven",
+   "term": "seven",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7708-seven"
+   "path": "/dictionary/58-numbers/7708-seven",
+   "lessonRefs": [
+    "num_7"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/seven_1680117932_46048.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/myYd9KLYNhkCn2TPMmci1680118470671.png"
   },
   {
-   "term": "Seventeen",
+   "term": "seventeen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7709-seventeen"
+   "path": "/dictionary/58-numbers/7709-seventeen",
+   "lessonRefs": [
+    "num_17"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/seventeen_1680117947_85491.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/TRg7xUCbJU1knBsjptHX1680118495675.png"
   },
   {
    "term": "Single",
@@ -21127,34 +21441,62 @@
    "path": "/dictionary/58-numbers/7721-single"
   },
   {
-   "term": "Sixteen",
+   "term": "sixteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7727-sixteen"
+   "path": "/dictionary/58-numbers/7727-sixteen",
+   "lessonRefs": [
+    "num_16"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/sixteen_1680118446_18169.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/rkr9kXjJJp0oSMhgUDbb1680118975689.png"
   },
   {
-   "term": "Thirteen",
+   "term": "thirteen",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7760-thirteen"
+   "path": "/dictionary/58-numbers/7760-thirteen",
+   "lessonRefs": [
+    "num_13"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/t/720p/thirteen_1680119269_69072.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/AomkucFferxyGReUrFtw1680119585722.png"
   },
   {
-   "term": "Three",
+   "term": "three",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7761-three"
+   "path": "/dictionary/58-numbers/7761-three",
+   "lessonRefs": [
+    "num_3"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/t/720p/three_1680119282_13744.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/KHOjpeFPtnpmxRRiXi8y1680119755732.png"
   },
   {
-   "term": "Twelve",
+   "term": "twelve",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7773-twelve"
+   "path": "/dictionary/58-numbers/7773-twelve",
+   "lessonRefs": [
+    "num_12"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/t/720p/twelve_1680119594_31429.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/NmyECEiJcENK5fUbbiBz1680120155746.png"
   },
   {
-   "term": "Two",
+   "term": "two",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/7775-two"
+   "path": "/dictionary/58-numbers/7775-two",
+   "lessonRefs": [
+    "num_2"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/t/720p/two_1680119661_32772.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/EkaqPljN5ppjFlA0MviG1680120165747.png"
   },
   {
    "term": "Zero",
    "category": "Numbers",
-   "path": "/dictionary/58-numbers/8109-zero"
+   "path": "/dictionary/58-numbers/8109-zero",
+   "lessonRefs": [
+    "num_0"
+   ]
   },
   {
    "term": "Agreement",
@@ -24967,14 +25309,12 @@
    "path": "/dictionary/67-space/4457-milky-way"
   },
   {
-   "term": "moon",
+   "term": "Moon",
    "category": "Space",
    "path": "/dictionary/67-space/4458-moon",
    "lessonRefs": [
     "letter_che"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/m/720p/moon_1622809670_33280.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/moon_1622809670_79094.jpg"
+   ]
   },
   {
    "term": "Neptune",
@@ -25412,14 +25752,12 @@
    "path": "/dictionary/69-sports-games/4547-first-place"
   },
   {
-   "term": "football",
+   "term": "Football",
    "category": "Sports Games",
    "path": "/dictionary/69-sports-games/4550-football",
    "lessonRefs": [
     "letter_fay"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/football_1622878851_35162.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/football_1622878851_98198.jpg"
+   ]
   },
   {
    "term": "Football Field",
@@ -25867,14 +26205,12 @@
    "path": "/dictionary/69-sports-games/7527-kabaddi"
   },
   {
-   "term": "kite",
+   "term": "Kite",
    "category": "Sports Games",
    "path": "/dictionary/69-sports-games/7534-kite",
    "lessonRefs": [
     "letter_pe"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/k/720p/kite_1680109925_36078.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/etcYnDV4XR9chtmGR2Bj1680110605188.png"
+   ]
   },
   {
    "term": "Match Game",
@@ -29005,14 +29341,12 @@
    "path": "/dictionary/73-weather/5351-global-warming"
   },
   {
-   "term": "hail",
+   "term": "Hail",
    "category": "Weather",
    "path": "/dictionary/73-weather/5352-hail",
    "lessonRefs": [
     "letter_zhe"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/h/720p/hail_1623346199_40125.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/hail_1623346199_74165.jpg"
+   ]
   },
   {
    "term": "Hail Storm",
@@ -29085,14 +29419,12 @@
    "path": "/dictionary/73-weather/5375-partly-cloudy"
   },
   {
-   "term": "rain",
+   "term": "Rain",
    "category": "Weather",
    "path": "/dictionary/73-weather/5376-rain",
    "lessonRefs": [
     "letter_rre"
-   ],
-   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/r/720p/rain_1623346890_82348.mp4",
-   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/rain_1623346890_99426.jpg"
+   ]
   },
   {
    "term": "Rain Drop",
@@ -32647,132 +32979,262 @@
   {
    "term": "A",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/134-a"
+   "path": "/dictionary/101-english-alphabet/134-a",
+   "lessonRefs": [
+    "letter_en_a"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/a/720p/a_1598514166_52439.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/FpHChSm2YmCCbvKyTbRj1598514467125.png"
   },
   {
    "term": "B",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/135-b"
+   "path": "/dictionary/101-english-alphabet/135-b",
+   "lessonRefs": [
+    "letter_en_b"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/b/720p/b_1598514185_47166.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/ueChkdrqCwHCZ63FVsOG1598514567130.png"
   },
   {
    "term": "C",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/136-c"
+   "path": "/dictionary/101-english-alphabet/136-c",
+   "lessonRefs": [
+    "letter_en_c"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/c/720p/c_1598514210_47986.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/QPBhqB18y8G1VTEecrHi1598514547115.png"
   },
   {
    "term": "D",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/137-d"
+   "path": "/dictionary/101-english-alphabet/137-d",
+   "lessonRefs": [
+    "letter_en_d"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/d/720p/d_1598514255_47047.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/P8eB3oxF3kAlz5hRF8xx1598514427131.png"
   },
   {
    "term": "E",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/138-e"
+   "path": "/dictionary/101-english-alphabet/138-e",
+   "lessonRefs": [
+    "letter_en_e"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/e/720p/e_1598514275_69260.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/9GBeVGZG60imGE7qwyoR1598514527116.png"
   },
   {
    "term": "F",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/139-f"
+   "path": "/dictionary/101-english-alphabet/139-f",
+   "lessonRefs": [
+    "letter_en_f"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/f/720p/f_1598514335_24378.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/KQL229xSXKCd2hGkcdki1598514487115.png"
   },
   {
    "term": "G",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/140-g"
+   "path": "/dictionary/101-english-alphabet/140-g",
+   "lessonRefs": [
+    "letter_en_g"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/g/720p/g_1598514358_99758.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/tGyTznCwnEgSCnfGq2Vm1598514447177.png"
   },
   {
    "term": "H",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/141-h"
+   "path": "/dictionary/101-english-alphabet/141-h",
+   "lessonRefs": [
+    "letter_en_h"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/h/720p/h_1598514410_81775.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/OhySmoBXzDyd2AzCNjUd1598514507116.png"
   },
   {
    "term": "I",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/142-i"
+   "path": "/dictionary/101-english-alphabet/142-i",
+   "lessonRefs": [
+    "letter_en_i"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/i/720p/i_1598514443_35213.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/PaZHRbXBVeyF9zk99Aks1598515127205.png"
   },
   {
    "term": "J",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/144-j"
+   "path": "/dictionary/101-english-alphabet/144-j",
+   "lessonRefs": [
+    "letter_en_j"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/j/720p/j_1679987036_67121.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/nwhTxDsxqg39SM5vCGOt1679987411759.png"
   },
   {
    "term": "K",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/145-k"
+   "path": "/dictionary/101-english-alphabet/145-k",
+   "lessonRefs": [
+    "letter_en_k"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/k/720p/k_1598514542_53830.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/t3P5acs17lAlksVzNgt31598515167198.png"
   },
   {
    "term": "L",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/146-l"
+   "path": "/dictionary/101-english-alphabet/146-l",
+   "lessonRefs": [
+    "letter_en_l"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/l/720p/l_1598514566_33340.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/hMtyXcGCWt0vRx2KWkkw1598515027163.png"
   },
   {
    "term": "M",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/147-m"
+   "path": "/dictionary/101-english-alphabet/147-m",
+   "lessonRefs": [
+    "letter_en_m"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/m/720p/m_1598514668_65927.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/guecu4TAY9zFpZlfPIc81598515327221.png"
   },
   {
    "term": "N",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/148-n"
+   "path": "/dictionary/101-english-alphabet/148-n",
+   "lessonRefs": [
+    "letter_en_n"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/n/720p/n_1598514688_18633.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/1vFv1MLJ6PhYLhRL5Ed81598515367225.png"
   },
   {
    "term": "O",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/149-o"
+   "path": "/dictionary/101-english-alphabet/149-o",
+   "lessonRefs": [
+    "letter_en_o"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/o/720p/o_1598514732_84368.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/WDGSElj931xW5PHcozY81598515187196.png"
   },
   {
    "term": "P",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/150-p"
+   "path": "/dictionary/101-english-alphabet/150-p",
+   "lessonRefs": [
+    "letter_en_p"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/p/720p/p_1598514754_46036.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/J7c9HJjISuaJml5oveon1598515247194.png"
   },
   {
    "term": "Q",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/151-q"
+   "path": "/dictionary/101-english-alphabet/151-q",
+   "lessonRefs": [
+    "letter_en_q"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/q/720p/q_1598514775_45823.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/wft0gvAlZtxNKPoIovvk1598515287224.png"
   },
   {
    "term": "R",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/152-r"
+   "path": "/dictionary/101-english-alphabet/152-r",
+   "lessonRefs": [
+    "letter_en_r"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/r/720p/r_1598514793_76686.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/xVeWryVXoX42oPyG7skZ1598515307304.png"
   },
   {
    "term": "S",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/153-s"
+   "path": "/dictionary/101-english-alphabet/153-s",
+   "lessonRefs": [
+    "letter_en_s"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/s/720p/s_1598514813_62346.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/SfCgsEYd6myclPcl5a1B1598515207201.png"
   },
   {
    "term": "T",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/154-t"
+   "path": "/dictionary/101-english-alphabet/154-t",
+   "lessonRefs": [
+    "letter_en_t"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/t/720p/t_1598514832_38258.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/GfWqjcDGYmjlkHJhE3wG1598515107258.png"
   },
   {
    "term": "U",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/155-u"
+   "path": "/dictionary/101-english-alphabet/155-u",
+   "lessonRefs": [
+    "letter_en_u"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/u/720p/u_1598514850_12541.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/0xGS2b0Cx59KZavhioHT1598515147191.png"
   },
   {
    "term": "V",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/156-v"
+   "path": "/dictionary/101-english-alphabet/156-v",
+   "lessonRefs": [
+    "letter_en_v"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/v/720p/v_1598514866_89659.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/F4kUlEjuq9TLaDeSfRJN1598515267244.png"
   },
   {
    "term": "W",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/157-w"
+   "path": "/dictionary/101-english-alphabet/157-w",
+   "lessonRefs": [
+    "letter_en_w"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/w/720p/w_1598514882_93790.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/inF9ne6Mg0fMzghOXOnm1598515227197.png"
   },
   {
    "term": "X",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/158-x"
+   "path": "/dictionary/101-english-alphabet/158-x",
+   "lessonRefs": [
+    "letter_en_x"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/x/720p/x_1598514901_59022.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/rTWc141VbJqwU60G45iV1598515347215.png"
   },
   {
    "term": "Y",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/159-y"
+   "path": "/dictionary/101-english-alphabet/159-y",
+   "lessonRefs": [
+    "letter_en_y"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/y/720p/y_1598514921_17735.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/1y7QYIkQPxpgmqJUclol1598515067271.png"
   },
   {
    "term": "Z",
    "category": "English Alphabet",
-   "path": "/dictionary/101-english-alphabet/160-z"
+   "path": "/dictionary/101-english-alphabet/160-z",
+   "lessonRefs": [
+    "letter_en_z"
+   ],
+   "video": "https://d2a517kx38mlos.cloudfront.net/psl/public/videos/z/720p/z_1598514941_50908.mp4",
+   "poster": "https://d2a517kx38mlos.cloudfront.net/psl/public/posters/l2waDaHjJ17LhReypsTt1598515087243.png"
   }
  ]
 }
