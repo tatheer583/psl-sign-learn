@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { CameraPractice, type CameraReading } from '../components/CameraPractice';
 import { Confetti } from '../components/Confetti';
 import { PageHeader, StarChip, ProgressRing } from '../components/Pieces';
 import { SignMediaView } from '../components/SignMediaView';
-import { itemById } from '../content/types';
+import { allItems, itemById, type LearningItem } from '../content/types';
 import { loadLessons, type Lesson } from '../lib/lessons';
 import { useStore } from '../store/store';
 import { buzz, cssColor } from '../lib/util';
@@ -22,6 +22,9 @@ export function CameraStudioScreen() {
   const [guess, setGuess] = useState('');
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [detected, setDetected] = useState<string | null>(null);
+  const [celebrate, setCelebrate] = useState<'next' | 'last' | null>(null);
+  const advanceTimer = useRef<number | null>(null);
+  const didAdvance = useRef<string | null>(null);
 
   /** All bundled lessons — powers the "what your hand says" side panel. */
   useEffect(() => {
@@ -42,18 +45,53 @@ export function CameraStudioScreen() {
        itemById.get(`num_${target}`))
     : null;
 
+  const targetId = target ? normalizeTargetId(target) : null;
+
+  /** The sequence: next lesson in the same family (ا→ب→پ… / a→b→c… / 1→2→3…), or null at the end. */
+  const nextInFamily = (id: string): LearningItem | null => {
+    const root = id.startsWith('num_') ? 'num_' : id.startsWith('letter_en_') ? 'letter_en_' : 'letter_';
+    const fam = allItems.filter((i) =>
+      root === 'letter_' ? (i.id.startsWith('letter_') && !i.id.startsWith('letter_en_')) : i.id.startsWith(root),
+    );
+    const k = fam.findIndex((i) => i.id === id);
+    return k >= 0 ? (fam[k + 1] ?? null) : null;
+  };
+
   const onReading = (r: CameraReading) => {
     setReading(r);
     if (r.label) setDetected((prev) => (prev === r.label ? prev : r.label)); // remember last known shape
-    if (r.confirmed && target != null) {
+    if (r.confirmed && targetId != null && didAdvance.current !== targetId) {
+      didAdvance.current = targetId; // confirmations repeat every frame — advance once
       buzz([0, 150, 60, 150]);
-      reward(normalizeTargetId(target), 'camera');
+      reward(targetId, 'camera');
       setBurst((b) => b + 1);
+      const next = nextInFamily(targetId);
+      if (next) {
+        setCelebrate('next');
+        advanceTimer.current = window.setTimeout(() => {
+          advanceTimer.current = null;
+          setCelebrate(null);
+          setReading(null);
+          setDetected(null);
+          const tier = next.id.startsWith('letter_en_') ? 'letter_en_' : next.id.startsWith('num_') ? 'num_' : 'letter_';
+          nav(`/practice?target=${encodeURIComponent(next.id.replace(tier, ''))}&mode=${mode}&display=${encodeURIComponent(next.title)}`);
+        }, 2400);
+      } else {
+        setCelebrate('last');
+        advanceTimer.current = window.setTimeout(() => { advanceTimer.current = null; setCelebrate(null); }, 3600);
+      }
     }
   };
 
+  // A new target (auto-advance or manual switch) re-arms the chain.
+  useEffect(() => {
+    didAdvance.current = null;
+    if (advanceTimer.current) { window.clearTimeout(advanceTimer.current); advanceTimer.current = null; }
+    setCelebrate(null);
+  }, [targetId]);
+  useEffect(() => () => { if (advanceTimer.current) window.clearTimeout(advanceTimer.current); }, []);
+
   /** Side panel: the sign matching the user's CURRENT gesture — else the target example. */
-  const targetId = target ? normalizeTargetId(target) : null;
   const shown =
     (detected ? lessonById.get(normalizeTargetId(detected)) : null) ??
     (targetId ? lessonById.get(targetId) : null) ??
@@ -115,6 +153,21 @@ export function CameraStudioScreen() {
         <p className={`status-msg ${reading?.confirmed ? 'confirmed' : ''}`}>{reading?.message ?? 'Set the camera up…'}</p>
       </div>
 
+      {celebrate && (() => {
+        const nextNow = targetId ? nextInFamily(targetId) : null;
+        return (
+          <div className="celebrate-banner" role="status">
+            <div className="celebrate-big">Well done! 🎉</div>
+            {celebrate === 'next' && nextNow && (
+              <div className="celebrate-sub">Up next — show <b className="urdu">{nextNow.title}</b> {nextNow.objectEmoji}</div>
+            )}
+            {celebrate === 'last' && (
+              <div className="celebrate-sub">That was the last one in this set — keep practising, or type another sign below!</div>
+            )}
+          </div>
+        );
+      })()}
+
       <div className="guess-row">
         <input
           className="text-input"
@@ -123,6 +176,23 @@ export function CameraStudioScreen() {
           onChange={(e) => setGuess(e.target.value)}
           onKeyDown={onGuessKey}
         />
+        {targetId && (() => {
+          const nx = nextInFamily(targetId);
+          if (!nx) return null;
+          const tier = nx.id.startsWith('letter_en_') ? 'letter_en_' : nx.id.startsWith('num_') ? 'num_' : 'letter_';
+          return (
+            <button
+              className="btn secondary skip-btn"
+              onClick={() => {
+                setReading(null);
+                setDetected(null);
+                nav(`/practice?target=${encodeURIComponent(nx.id.replace(tier, ''))}&mode=${mode}&display=${encodeURIComponent(nx.title)}`);
+              }}
+            >
+              ⏭ Skip
+            </button>
+          );
+        })()}
       </div>
       <p className="honest-note">
         A camera match means the handshape looks right — it is not a score of ability! 💐

@@ -45,6 +45,12 @@ export function CameraPractice({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const onReadingRef = useRef(onReading);
   onReadingRef.current = onReading;
+  // The camera loop starts once; target changes arrive while it runs —
+  // hand them over per-frame through refs so advances never reboot the camera.
+  const targetRef = useRef(target);
+  targetRef.current = target;
+  const targetDisplayRef = useRef(targetDisplay);
+  targetDisplayRef.current = targetDisplay;
 
   const [permissionDenied, setPermissionDenied] = useState(false);
   const [failure, setFailure] = useState<string | null>(null);
@@ -109,7 +115,8 @@ export function CameraPractice({
               const points: Landmark[] = hands[0].map((l) => ({ x: l.x, y: l.y, z: l.z }));
               const prediction = classifier.predict(points);
               const candidate = prediction && prediction.accepted ? prediction.label : null;
-              const matches = candidate !== null && (target === null || target === candidate);
+              const tgt = targetRef.current;
+              const matches = candidate !== null && (tgt === null || tgt === candidate);
               const hold = gate.update(matches ? candidate : null, now, true);
               deliver({
                 label: candidate,
@@ -118,8 +125,8 @@ export function CameraPractice({
                 message:
                   hold.confirmed ? 'You did it! ✨ Lower your hand before the next sign.'
                   : candidate === null ? 'I see your hand. Turn it gently towards the camera.'
-                  : target !== null && candidate !== target
-                    ? `Let's look at ${targetDisplay ?? target} again. Take your time.`
+                  : tgt !== null && candidate !== tgt
+                    ? `Let's look at ${targetDisplayRef.current ?? tgt} again. Take your time.`
                   : hold.progress >= 1 ? 'Lower your hand, then show another sign.'
                   : 'Keep this shape for a moment…',
               });
