@@ -98,9 +98,11 @@ export function LessonDetailScreen() {
               </button>
             ) : (
               <div className="teacher-note">
-                {needsTeacher
-                  ? '✋ This letter needs guided practice together with a teacher — a photo alone cannot grade it.'
-                  : '🤝 practise together with a teacher or family'}
+                {item.id.startsWith('num_')
+                  ? '🔢 Number signs move with both hands — the camera coach teaches letters, numbers learn best together with your teacher or family 👋'
+                  : needsTeacher
+                    ? '✋ This letter needs guided practice together with a teacher — a photo alone cannot grade it.'
+                    : '🤝 practise together with a teacher or family'}
               </div>
             )}
           </div>
