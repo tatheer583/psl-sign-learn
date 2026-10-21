@@ -189,6 +189,19 @@ button { font-family: inherit; }
   position: relative; border-radius: 22px; overflow: hidden; background: #10232C;
   aspect-ratio: 4 / 3; max-height: 62vh; width: 100%;
 }
+.camera-gate {
+  position: absolute; inset: 0; z-index: 5; display: grid; place-content: center;
+  text-align: center; gap: 8px; padding: 18px; background: #10232C; color: #F2F4FC;
+}
+.camera-gate .camera-title { font-weight: 800; font-size: 1.2rem; }
+.camera-gate p { max-width: 34ch; }
+.camera-hint { color: #BFD6DF; font-size: .8rem; font-weight: 600; }
+.camera-video-pre { opacity: 0; }
+.camera-loading {
+  position: absolute; top: 44px; left: 10px; z-index: 4; max-width: 92%;
+  background: rgba(10, 14, 24, .65); color: #fff; font-size: .78rem; font-weight: 700;
+  border-radius: 999px; padding: 6px 12px;
+}
 .camera-video {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   transform: scaleX(-1);

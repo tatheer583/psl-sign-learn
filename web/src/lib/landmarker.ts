@@ -49,14 +49,18 @@ export async function createHandLandmarker(numHands = 2): Promise<HandLandmarker
   }
 }
 
-/** Start a user-facing camera; returns a ref to the HTMLVideoElement (mirrored in CSS). */
-export async function startCamera(video: HTMLVideoElement): Promise<MediaStream> {
+/** Start a user-facing camera; returns the stream (mirrored in CSS). */
+export async function startCamera(
+  video: HTMLVideoElement,
+  facing: 'user' | 'environment' = 'user',
+): Promise<MediaStream> {
   const stream = await navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
-      facingMode: 'user',
-      width: { ideal: 640 },
-      height: { ideal: 480 },
+      facingMode: facing,
+      // 480×360 is plenty for 21 landmarks and keeps cheap phone CPUs cool.
+      width: { ideal: 480 },
+      height: { ideal: 360 },
     },
   });
   video.srcObject = stream;
