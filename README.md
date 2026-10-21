@@ -74,7 +74,9 @@ handshape looks right"* — never a grade of her ability.
 - **Official Dictionary (web)** — 6,447 real PSL sign videos streamed from
   [psl.org.pk](https://psl.org.pk/) with attribution and link-back: search Urdu or
   English, browse kid-friendly category chips, and a **Next sign** button keeps
-  playing one official video after another.
+  playing one official video after another. A few entries simply don't exist on
+  psl.org.pk (numbers 21–49 in steps of one, the word *Friend*) — Irssa shows no
+  card at all for those rather than guessing.
 - **A grown-ups area** — progress backup, daily goals, full media attribution, and
   honest notes about what the camera can and cannot do.
 
