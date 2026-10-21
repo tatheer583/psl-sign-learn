@@ -275,11 +275,13 @@ button { font-family: inherit; }
 
 /* ---------- alphabet & words ---------- */
 .word-list { display: flex; flex-direction: column; gap: 8px; }
-.word-row {
+.word-row { display: flex; align-items: center; gap: 8px; }
+.word-row-main {
   border: none; cursor: pointer; background: var(--surface); border-radius: 16px;
   display: flex; align-items: center; gap: 12px; padding: 10px 14px; box-shadow: var(--shadow);
-  text-align: left;
+  text-align: left; flex: 1; min-width: 0; font: inherit; color: inherit;
 }
+.word-row .speaker-mini { flex: 0 0 auto; }
 .word-rank { font-size: 1.6rem; min-width: 44px; text-align: center; }
 .word-media { width: 46px; height: 46px; border-radius: 10px; object-fit: cover; background: var(--surface-variant); }
 .word-media.fallback { display: grid; place-items: center; font-size: 1.4rem; }

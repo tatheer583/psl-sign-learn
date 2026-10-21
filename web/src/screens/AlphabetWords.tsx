@@ -4,6 +4,7 @@ import { allItems } from '../content/types';
 import { wordLabel } from '../content/types';
 import { loadLessons } from '../lib/lessons';
 import { PageHeader, StarChip } from '../components/Pieces';
+import { speakAlways } from '../lib/tts';
 import { useStore } from '../store/store';
 
 /** Port of AlphabetWordsScreen — letters matched with their everyday words. */
@@ -41,14 +42,28 @@ export function AlphabetWordsScreen() {
       </div>
       <div className="word-list">
         {letters.map((it) => (
-          <button key={it.id} className="word-row" onClick={() => nav(`/learn/${it.id}`)}>
-            <span className="word-rank urdu">{it.title}</span>
-            {media[it.id]
-              ? <img className="word-media" src={media[it.id]} alt="" loading="lazy" />
-              : <span className="word-media fallback">{it.objectEmoji}</span>}
-            <span className="word-name">{wordLabel(it.id)}</span>
-            <span className="word-arrow">→</span>
-          </button>
+          <div key={it.id} className="word-row">
+            <button
+              className="word-row-main"
+              onClick={() => nav(`/learn/${it.id}`)}
+              aria-label={`Learn ${wordLabel(it.id)}`}
+            >
+              <span className="word-rank urdu">{it.title}</span>
+              {media[it.id]
+                ? <img className="word-media" src={media[it.id]} alt="" loading="lazy" />
+                : <span className="word-media fallback">{it.objectEmoji}</span>}
+              <span className="word-name">{wordLabel(it.id)}</span>
+              <span className="word-arrow">→</span>
+            </button>
+            <button
+              className="speaker-mini"
+              aria-label={`Hear ${wordLabel(it.id)} aloud`}
+              title="Hear the word"
+              onClick={() => speakAlways(wordLabel(it.id).replace(/\(.*$/, '').trim())}
+            >
+              🔊
+            </button>
+          </div>
         ))}
       </div>
     </div>
