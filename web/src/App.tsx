@@ -69,6 +69,7 @@ function BottomNav() {
             key={n.to}
             href={`#${n.to}`}
             className={`bn-item ${active ? 'active' : ''}`}
+            aria-current={active ? 'page' : undefined}
           >
             <span className="bn-icon">{n.icon}</span>
             <span className="bn-label">{n.label}</span>

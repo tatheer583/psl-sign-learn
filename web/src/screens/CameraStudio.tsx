@@ -148,7 +148,7 @@ export function CameraStudioScreen() {
         </div>
       </div>
 
-      <div className="practice-status">
+      <div className="practice-status" aria-live="polite">
         <ProgressRing progress={reading?.progress ?? 0} />
         <p className={`status-msg ${reading?.confirmed ? 'confirmed' : ''}`}>{reading?.message ?? 'Set the camera up…'}</p>
       </div>
@@ -171,6 +171,7 @@ export function CameraStudioScreen() {
       <div className="guess-row">
         <input
           className="text-input"
+          aria-label="Type an Urdu letter, an English letter, or a number to switch the practice target"
           placeholder="Type ب / A / 7 to switch target…"
           value={guess}
           onChange={(e) => setGuess(e.target.value)}

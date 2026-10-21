@@ -462,7 +462,14 @@ button { font-family: inherit; }
 .dict-chip:active { transform: scale(0.96); }
 .dict-player-actions { display: flex; align-items: center; gap: 10px; }
 .dict-pos { color: var(--muted); font-size: .78rem; font-weight: 700; }
+/* keyboard focus — visible rings for every interactive element */
+:focus-visible {
+  outline: 3px solid #F59E0B;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
 .stts-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.guess-row .skip-btn { flex: 0 0 auto; }
 
 /* ---------- camera studio split: mirror + live gesture panel ---------- */
 .practice-split { display: flex; gap: 12px; align-items: stretch; }
@@ -488,7 +495,6 @@ button { font-family: inherit; }
 }
 .celebrate-big { font-size: 1.6rem; font-weight: 800; }
 .celebrate-sub { font-weight: 600; color: #166534; margin-top: 2px; font-size: .95rem; }
-.guess-row .skip-btn { flex: 0 0 auto; }
 @keyframes celebrate-pop {
   from { transform: scale(.85); opacity: 0; }
   to { transform: scale(1); opacity: 1; }

@@ -40,7 +40,14 @@ export function HomeScreen() {
         right={<StarChip stars={learner.stars} />}
       />
 
-      <div className="home-hero" onClick={() => nav('/learn')}>
+      <div
+        className="home-hero"
+        role="button"
+        tabIndex={0}
+        aria-label="Continue your learning journey"
+        onClick={() => nav('/learn')}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); nav('/learn'); } }}
+      >
         <img src="./img/hero.jpg" alt="Irssa" className="home-hero-img" />
         <div className="home-hero-text">
           <div className="urdu hero-urdu">پاکستان سائن لینگویج سیکھیں</div>
