@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { allItems } from '../content/types';
 import { wordLabel } from '../content/types';
+import { loadLessons } from '../lib/lessons';
 import { PageHeader, StarChip } from '../components/Pieces';
 import { useStore } from '../store/store';
 
@@ -15,11 +16,10 @@ export function AlphabetWordsScreen() {
 
   useEffect(() => {
     let dead = false;
-    import('../lib/lessons').then(({ loadLessons }) =>
-      loadLessons().then((ls) => {
-        if (dead) return;
-        setMedia(Object.fromEntries(ls.filter((l) => l.media && !l.isVideo).map((l) => [l.id, `./marks/${l.media}`])));
-      }).catch(() => undefined));
+    loadLessons().then((ls) => {
+      if (dead) return;
+      setMedia(Object.fromEntries(ls.filter((l) => l.media && !l.isVideo).map((l) => [l.id, `./marks/${l.media}`])));
+    }).catch(() => undefined);
     return () => { dead = true; };
   }, []);
 

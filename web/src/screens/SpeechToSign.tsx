@@ -4,7 +4,6 @@ import { itemById } from '../content/types';
 import { SignMediaView } from '../components/SignMediaView';
 import { PageHeader } from '../components/Pieces';
 import { loadLessons, type Lesson } from '../lib/lessons';
-import { useStore } from '../store/store';
 import {
   speak, speakAlways, speechRecognitionAvailable, startListening,
   ttsAvailable, ttsEnabled, setTtsEnabled,
@@ -16,7 +15,6 @@ import {
  */
 export function SpeechToSignScreen() {
   const nav = useNavigate();
-  const { learner, update } = useStore();
   const [lessons, setLessons] = useState<Lesson[] | null>(null);
   const [word, setWord] = useState('');
   const [listening, setListening] = useState(false);

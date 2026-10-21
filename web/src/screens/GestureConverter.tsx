@@ -65,7 +65,7 @@ export function GestureConverterScreen() {
 
   useEffect(() => {
     let dead = false;
-    loadLessons().then((ls) => { if (!dead) setLessons(ls); else void dead; }).catch(() => setLessons([]));
+    loadLessons().then((ls) => { if (!dead) setLessons(ls); }).catch(() => setLessons([]));
     return () => { dead = true; };
   }, []);
 

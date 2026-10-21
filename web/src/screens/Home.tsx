@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStore, todayCount, streak } from '../store/store';
 import { PageHeader, StarChip } from '../components/Pieces';
-import { content } from '../content/types';
 
 interface HomeCard {
   to: string; title: string; sub: string; emoji: string; color: number;
@@ -13,7 +12,6 @@ export function HomeScreen() {
   const nav = useNavigate();
   const { learner } = useStore();
   const sc = todayCount(learner);
-  const goal = Math.min(learner.dailyGoal, Math.max(learner.dailyGoal, sc && learner.dailyGoal));
   const pct = Math.min(100, Math.round((sc / learner.dailyGoal) * 100));
   const days = streak(learner);
 
@@ -86,7 +84,6 @@ export function HomeScreen() {
         Irssa · made with love for Pakistan's Deaf community ·{' '}
         <a href="#/family" onClick={(e) => { e.preventDefault(); nav('/family'); }}>attribution</a>
       </p>
-      <span hidden>{content.levels.length}</span>
     </div>
   );
 }

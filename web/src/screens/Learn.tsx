@@ -4,6 +4,7 @@ import { allItems } from '../content/types';
 import type { LearningItem } from '../content/types';
 import { PageHeader, StarChip } from '../components/Pieces';
 import { ItemCard } from '../components/ItemCard';
+import { loadLessons } from '../lib/lessons';
 import { useStore } from '../store/store';
 
 export type CatKey = 'urdu' | 'english' | 'numbers' | 'words' | 'favorites';
@@ -33,15 +34,13 @@ export function LearnScreen() {
 
   useEffect(() => {
     let dead = false;
-    // Lazy-hydrate card photos from the bundled media manifest.
-    import('../lib/lessons').then(({ loadLessons }) =>
-      loadLessons().then((lessons) => {
-        if (dead) return;
-        setMediaById(Object.fromEntries(
-          lessons.filter((l) => l.media && !l.isVideo).map((l) => [l.id, `./marks/${l.media}`]),
-        ));
-      }).catch(() => undefined),
-    );
+    // Hydrate card photos from the bundled media manifest.
+    loadLessons().then((lessons) => {
+      if (dead) return;
+      setMediaById(Object.fromEntries(
+        lessons.filter((l) => l.media && !l.isVideo).map((l) => [l.id, `./marks/${l.media}`]),
+      ));
+    }).catch(() => undefined);
     return () => { dead = true; };
   }, []);
 
