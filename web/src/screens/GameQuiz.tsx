@@ -18,7 +18,12 @@ interface QuizQuestion {
 function generate(): QuizQuestion {
   const pool = quizPool();
   const target = pool[Math.floor(Math.random() * pool.length)];
-  const others = pool.filter((i) => i.id !== target.id).slice(0, 2);
+  // Android parity: 4 options. Distractors come from the same category when
+  // possible (_letters confuse with letters, numbers with numbers_), so the
+  // question stays a real discrimination task instead of a shape-guess.
+  const peers = pool.filter((i) => i.id !== target.id && i.category === target.category);
+  const source = peers.length >= 3 ? peers : pool.filter((i) => i.id !== target.id);
+  const others = source.slice(0, 3);
   const options = shuffle([...others, target]);
   const type: QuizType = target.visualItemsCount > 0
     ? 'COUNTING_FINGERS'
