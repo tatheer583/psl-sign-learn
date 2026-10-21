@@ -53,14 +53,28 @@ hands from **independent signers** across multiple datasets, and tuned to prefer
 saying *"take your time"* over a false *"you did it!"*. When the sign holds for
 1.2 seconds: stars, haptics, confetti — success she can feel, not just hear.
 
+**Camera Studio (web)** practices in a two-panel view: the live mirror on one
+side, the sign she is working on on the other — and the side card follows her
+hand, naming any sign she makes ("Looks like ا 👋") while honest notes say when
+it differs from the target. A confirmed hold rings Well done! and the studio
+**automatically brings up the next sign in the set** — ا→ب→پ… / A→B→C… / 1→2→3… —
+so one visit can cover the whole alphabet. A camera match still means *"this
+handshape looks right"* — never a grade of her ability.
+
 ### Numbers, words, and games 🔢🎮
 
 - **Numbers 0–50 and everyday words** — guided practice, made to be learned together
   with a teacher or family.
 - **Speed Match, quizzes, camera quests, stickers** — because learning should feel
-  like playing.
+  like playing. Quiz questions show **4 options with same-category distractors**,
+  matching the Android original.
 - **Gesture converter & speech-to-sign** — type or speak a word and watch it
-  finger-spelled, letter by letter.
+  finger-spelled, letter by letter; every spelled word has a **Listen again** replay
+  and a **Next word** button, and each row in Alphabet & Words can be heard aloud.
+- **Official Dictionary (web)** — 6,447 real PSL sign videos streamed from
+  [psl.org.pk](https://psl.org.pk/) with attribution and link-back: search Urdu or
+  English, browse kid-friendly category chips, and a **Next sign** button keeps
+  playing one official video after another.
 - **A grown-ups area** — progress backup, daily goals, full media attribution, and
   honest notes about what the camera can and cannot do.
 
