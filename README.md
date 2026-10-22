@@ -40,8 +40,17 @@ nothing in it is mocked up:
 - and the **camera coach** tracking a hand live on the device — 21 landmarks,
   no fake praise, no uploads.
 
-<sub>Captions are burned in, so it plays silently anywhere. Music is original and
+sub>Captions are burned in, so it plays silently anywhere. Music is original and
 license-free. Vertical 9:16 — it plays in the LinkedIn and YouTube feeds as-is.</sub>
+
+| Cut | Format | Best for |
+| --- | --- | --- |
+| [`irssa-demo.mp4`](docs/video/irssa-demo.mp4) | 1080 × 1920 (9:16), ~101 s | LinkedIn feed, YouTube Shorts, Instagram Reels, stories |
+| [`irssa-demo-16x9.mp4`](docs/video/irssa-demo-16x9.mp4) | 1920 × 1080 (16:9), ~101 s | LinkedIn desktop feed, YouTube, slides, portfolio sites |
+
+<preview>
+![Irssa demo — 16:9 cover](docs/video/cover-16x9.png)
+</preview>
 
 📣 **Sharing it?** A ready-to-post LinkedIn caption (English + Urdu) lives in
 [`docs/linkedin-post.md`](docs/linkedin-post.md).
