@@ -87,6 +87,12 @@ export function HomeScreen() {
       <button className="family-link" onClick={() => nav('/family')}>
         👨‍👩‍👧 For grown-ups: progress, settings & honest notes
       </button>
+
+      {/* The 100-second demo of this very app — hosted with the app, works offline. */}
+      <a className="family-link demo-link" href="video/irssa-demo.mp4" target="_blank" rel="noreferrer">
+        ▶ Watch the 100-second demo (video)
+      </a>
+
       <p className="home-footer">
         Irssa · made with love for Pakistan's Deaf community ·{' '}
         <a href="#/family" onClick={(e) => { e.preventDefault(); nav('/family'); }}>attribution</a>

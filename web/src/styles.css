@@ -163,6 +163,7 @@ button { font-family: inherit; }
   position: absolute; bottom: 8px; left: 8px; right: 8px; color: #fff; font-size: .68rem;
   background: rgba(10,14,24,.55); border-radius: 10px; padding: 4px 8px;
 }
+.media-credit { color: var(--muted); font-size: .68rem; text-align: center; margin: 8px 4px 0; line-height: 1.4; }
 .lesson-title-row { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
 .lesson-title { font-size: 3rem; line-height: 1.5; }
 .fav-btn { border: none; background: transparent; font-size: 1.8rem; cursor: pointer; }
@@ -308,6 +309,10 @@ button { font-family: inherit; }
   position: relative;
 }
 .spell-card .sign-media { aspect-ratio: 1; border-radius: 0; }
+/* In the small finger-spelling tiles the photo must stay visible — the credit
+   moves to one line under the row instead of covering the hand. */
+.spell-card .media-caption { display: none; }
+.spell-row { position: relative; }
 .spell-card.skip { display: grid; place-items: center; aspect-ratio: 1; color: var(--muted); font-weight: 800; }
 .spell-ch {
   position: absolute; bottom: 4px; right: 6px; background: rgba(255,255,255,.92);
@@ -341,6 +346,19 @@ button { font-family: inherit; }
 @keyframes pulse { 50% { transform: scale(1.06); } }
 .mic-btn:disabled { background: #CBD5E1; color: #64748B; }
 .error-note { color: #B3261E; font-weight: 700; font-size: .85rem; text-align: center; }
+.stts-hint { color: var(--muted); font-size: .82rem; text-align: center; margin: 2px 0 0; }
+.example-chips {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+  margin: 4px 0 2px;
+}
+.example-label { color: var(--muted); font-size: .8rem; font-weight: 700; }
+.example-chip {
+  background: var(--surface-variant); color: var(--on-surface); border: 1.5px solid transparent;
+  border-radius: 999px; padding: 7px 14px; font-size: 1rem; font-weight: 700; cursor: pointer;
+  font-family: inherit;
+}
+.example-chip:hover, .example-chip:focus-visible { border-color: var(--primary); }
+.dark-bg .example-chip { background: #1A1C30; color: #E2E8F0; }
 .stts-settings { display: flex; flex-direction: column; }
 
 /* ---------- stickers ---------- */

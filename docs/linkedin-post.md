@@ -3,12 +3,15 @@
 **Recommended:** upload the MP4 as a **native video post** (LinkedIn → Start a post → Video).
 Native video gets autoplay in the feed, captions, and far more reach than a link.
 
-- Video file (vertical, 1080 × 1920, ~101 s): `docs/video/irssa-demo.mp4`
-- Video file (horizontal, 1920 × 1080, ~101 s): `docs/video/irssa-demo-16x9.mp4`
-- Direct links (after the push lands on `main`):
+- Video file (vertical, 1080 × 1920, ~108 s): `docs/video/irssa-demo.mp4`
+- Video file (horizontal, 1920 × 1080, ~108 s): `docs/video/irssa-demo-16x9.mp4`
+- Direct links (hosted by the app itself — fast CDN, always up):
+  - `https://tatheer583.github.io/psl-sign-learn/video/irssa-demo.mp4`
+  - `https://tatheer583.github.io/psl-sign-learn/video/irssa-demo-16x9.mp4`
+- Fallback links (raw GitHub, for when Pages is redeploying):
   - `https://raw.githubusercontent.com/tatheer583/psl-sign-learn/main/docs/video/irssa-demo.mp4`
   - `https://raw.githubusercontent.com/tatheer583/psl-sign-learn/main/docs/video/irssa-demo-16x9.mp4`
-- Live web app: `https://tatheer583.github.io/psl-sign-learn/`
+- Live web app: `https://tatheer583.github.io/psl-sign-learn/` (Home screen has a ▶ *Watch the demo* button)
 - Repo: `https://github.com/tatheer583/psl-sign-learn`
 - Thumbnail / link preview: `docs/video/cover.png` (1200 × 627) and `docs/video/cover-16x9.png`
 

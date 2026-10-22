@@ -122,20 +122,25 @@ export function GestureConverterScreen() {
             maxLength={40}
           />
           {typedLetters.length > 0 && (
-            <div className="spell-row">
-              {typedLetters.map((c, i) => {
-                const lesson = c.id ? lessonById(c.id) : null;
-                if (!lesson) {
-                  return <div key={i} className="spell-card skip"><span className="spell-ch">{c.ch}</span></div>;
-                }
-                return (
-                  <div key={i} className="spell-card">
-                    <SignMediaView lesson={lesson} />
-                    <span className={`spell-ch ${/[a-zA-Z]/.test(c.ch) ? '' : 'urdu'}`}>{c.ch}</span>
-                  </div>
-                );
-              })}
-            </div>
+            <>
+              <div className="spell-row">
+                {typedLetters.map((c, i) => {
+                  const lesson = c.id ? lessonById(c.id) : null;
+                  if (!lesson) {
+                    return <div key={i} className="spell-card skip"><span className="spell-ch">{c.ch}</span></div>;
+                  }
+                  return (
+                    <div key={i} className="spell-card">
+                      <SignMediaView lesson={lesson} />
+                      <span className={`spell-ch ${/[a-zA-Z]/.test(c.ch) ? '' : 'urdu'}`}>{c.ch}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="media-credit">
+                Photos: PSL hand dataset (Mendeley Data V1, CC BY 4.0) — Ali Imran Ali, MNS University of Agriculture Multan.
+              </p>
+            </>
           )}
           <p className="honest-note">
             Whole words and numbers in PSL need movement or both hands — the app and your teacher

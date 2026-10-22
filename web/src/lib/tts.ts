@@ -118,31 +118,61 @@ export function speechRecognitionAvailable(): boolean {
   return 'webkitSpeechRecognition' in window || 'SpeechRecognition' in window;
 }
 
+/**
+ * Why the microphone cannot be used right now (null = it can).
+ * Speech recognition needs a secure page (https, or localhost) — on a plain
+ * http:// page the API exists but every request fails with a cryptic error.
+ */
+export function speechRecognitionBlockedReason(): 'unsupported' | 'insecure' | null {
+  if (!speechRecognitionAvailable()) return 'unsupported';
+  if (typeof window !== 'undefined' && window.isSecureContext === false) return 'insecure';
+  return null;
+}
+
+/** Browser error codes → a sentence a child (and their teacher) can act on. */
+const SPEECH_ERRORS: Record<string, string> = {
+  'no-speech': 'I did not hear anything — tap the mic again and speak a little louder.',
+  'audio-capture': 'No microphone was found on this device.',
+  'not-allowed': 'Microphone permission is blocked — allow it in the browser and try again.',
+  'service-not-allowed': 'The browser blocked the speech service — type the word below instead.',
+  'network': 'Chrome needs an internet connection to hear you — type the word below instead.',
+  'language-not-supported': 'This language is not supported here — type the word below instead.',
+  'aborted': 'Listening stopped before I heard anything — tap the mic to try again.',
+};
+
 export function startListening(
   onText: (text: string) => void,
   onError: (message: string) => void,
+  onEnd?: () => void,
   lang = 'en-US',
 ): () => void {
   const Ctor = (window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition;
   if (!Ctor) {
-    onError('Speech recognition is not available in this browser.');
+    onError('Speech recognition is not available in this browser — type the word below instead.');
     return () => undefined;
   }
   const rec = new Ctor();
   rec.lang = lang;
   rec.interimResults = false;
+  rec.continuous = false;
   rec.maxAlternatives = 1;
   let closed = false;
   rec.onresult = (e: any) => {
     const said = e.results?.[0]?.[0]?.transcript ?? '';
     if (said) onText(said);
   };
-  rec.onerror = (e: any) => onError(e?.error ?? 'Could not hear that.');
-  rec.onend = () => { closed = true; };
+  rec.onerror = (e: any) => {
+    const code = e?.error ?? '';
+    onError(SPEECH_ERRORS[code] ?? `Could not hear that (${code || 'unknown error'}) — type the word below instead.`);
+  };
+  rec.onend = () => {
+    closed = true;
+    onEnd?.();
+  };
   try {
     rec.start();
   } catch {
-    onError('Please allow microphone access and try again.');
+    onError('Could not start the microphone — allow it in the browser and try again.');
   }
   return () => {
     if (!closed) {

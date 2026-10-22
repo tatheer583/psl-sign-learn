@@ -23,11 +23,11 @@ and confetti falls. 🎉
 
 ---
 
-## 🎬 Watch it work — 100 seconds, the real app
+## 🎬 Watch it work — ~108 seconds, the real app
 
 [![Irssa demo video](docs/video/thumbnail.png)](docs/video/irssa-demo.mp4)
 
-**▶ [Play the demo video (MP4 · 1080 × 1920 · ~101 s)](docs/video/irssa-demo.mp4)**
+**▶ [Play the demo video (MP4 · 1080 × 1920 · ~108 s)](docs/video/irssa-demo.mp4)** &nbsp;·&nbsp; **▶ [16:9 cut](docs/video/irssa-demo-16x9.mp4)**
 
 A screen recording of the **production web build running in a real browser** —
 nothing in it is mocked up:
@@ -36,17 +36,26 @@ nothing in it is mocked up:
 - the 37 Urdu letters, each with its **real hand photograph** (CC BY 4.0 dataset),
 - the **official FESF dictionary** streaming live from psl.org.pk,
 - the gesture converter finger-spelling a word letter by letter,
+- **speech-to-sign** — a spoken word spelled back in hands, with offline examples,
 - a quiz round with confetti, stickers and stars,
 - and the **camera coach** tracking a hand live on the device — 21 landmarks,
   no fake praise, no uploads.
 
-sub>Captions are burned in, so it plays silently anywhere. Music is original and
+<sub>Captions are burned in, so it plays silently anywhere. Music is original and
 license-free. Vertical 9:16 — it plays in the LinkedIn and YouTube feeds as-is.</sub>
 
 | Cut | Format | Best for |
 | --- | --- | --- |
-| [`irssa-demo.mp4`](docs/video/irssa-demo.mp4) | 1080 × 1920 (9:16), ~101 s | LinkedIn feed, YouTube Shorts, Instagram Reels, stories |
-| [`irssa-demo-16x9.mp4`](docs/video/irssa-demo-16x9.mp4) | 1920 × 1080 (16:9), ~101 s | LinkedIn desktop feed, YouTube, slides, portfolio sites |
+| [`irssa-demo.mp4`](docs/video/irssa-demo.mp4) | 1080 × 1920 (9:16), ~108 s | LinkedIn feed, YouTube Shorts, Instagram Reels, stories |
+| [`irssa-demo-16x9.mp4`](docs/video/irssa-demo-16x9.mp4) | 1920 × 1080 (16:9), ~108 s | LinkedIn desktop feed, YouTube, slides, portfolio sites |
+
+**Direct links** — the app hosts the video itself, and its Home screen has a
+▶ *Watch the demo* button:
+
+- `https://tatheer583.github.io/psl-sign-learn/video/irssa-demo.mp4`
+- `https://tatheer583.github.io/psl-sign-learn/video/irssa-demo-16x9.mp4`
+- fallback (works even while Pages is redeploying):
+  `https://raw.githubusercontent.com/tatheer583/psl-sign-learn/main/docs/video/irssa-demo.mp4`
 
 <preview>
 ![Irssa demo — 16:9 cover](docs/video/cover-16x9.png)
