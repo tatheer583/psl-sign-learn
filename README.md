@@ -23,6 +23,31 @@ and confetti falls. 🎉
 
 ---
 
+## 🎬 Watch it work — 100 seconds, the real app
+
+[![Irssa demo video](docs/video/thumbnail.png)](docs/video/irssa-demo.mp4)
+
+**▶ [Play the demo video (MP4 · 1080 × 1920 · ~101 s)](docs/video/irssa-demo.mp4)**
+
+A screen recording of the **production web build running in a real browser** —
+nothing in it is mocked up:
+
+- the one-tap onboarding (no account, no ads, nothing leaves the phone),
+- the 37 Urdu letters, each with its **real hand photograph** (CC BY 4.0 dataset),
+- the **official FESF dictionary** streaming live from psl.org.pk,
+- the gesture converter finger-spelling a word letter by letter,
+- a quiz round with confetti, stickers and stars,
+- and the **camera coach** tracking a hand live on the device — 21 landmarks,
+  no fake praise, no uploads.
+
+<sub>Captions are burned in, so it plays silently anywhere. Music is original and
+license-free. Vertical 9:16 — it plays in the LinkedIn and YouTube feeds as-is.</sub>
+
+📣 **Sharing it?** A ready-to-post LinkedIn caption (English + Urdu) lives in
+[`docs/linkedin-post.md`](docs/linkedin-post.md).
+
+---
+
 ## 📲 Download & install (no setup needed)
 
 1. Open the [`apk/`](apk/) folder of this repository.
